@@ -12,7 +12,6 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,32 +31,31 @@ jobs:
         run: |
           python - <<'PY'
           import json
+          import xml.etree.ElementTree as ET
           from pathlib import Path
 
-          path = Path("fortinet_advisories.json")
-          data = json.loads(path.read_text(encoding="utf-8"))
+          data = json.loads(Path('fortinet_advisories.json').read_text(encoding='utf-8'))
+          valid = sum(x.get('ExtractionStatus') == 'Version table extracted' for x in data)
+          root = ET.parse('fortinet_enriched.xml').getroot()
+          rss_items = root.findall('./channel/item')
 
-          if not data:
-              raise SystemExit("No advisories collected")
+          print(f'Collected: {len(data)}, extracted: {valid}, RSS items: {len(rss_items)}')
 
-          valid = sum(
-              item.get("ExtractionStatus") == "Version table extracted"
-              for item in data
-          )
+          if not data or valid == 0 or len(rss_items) != valid:
+              raise SystemExit('Missing or inconsistent enriched RSS output')
 
-          print(f"Total advisories: {len(data)}")
-          print(f"Version tables extracted: {valid}")
-
-          if valid == 0:
-              raise SystemExit("No version tables extracted")
+          for item in rss_items:
+              payload = json.loads(item.findtext('description'))
+              if not payload.get('AffectedVersions'):
+                  raise SystemExit('RSS item missing affected versions')
           PY
 
-      - name: Commit updated JSON
+      - name: Commit updated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fortinet_advisories.json
+          git add fortinet_advisories.json fortinet_enriched.xml
           if ! git diff --cached --quiet; then
-            git commit -m "Update Fortinet PSIRT advisories"
+            git commit -m "Update Fortinet PSIRT advisories and enriched RSS"
             git push
           fi
