@@ -1,0 +1,63 @@
+
+name: Fortinet PSIRT Collector
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 5 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Collect Fortinet advisories
+        run: python fortinet_collector.py
+
+      - name: Validate output
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("fortinet_advisories.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+
+          if not data:
+              raise SystemExit("No advisories collected")
+
+          valid = sum(
+              item.get("ExtractionStatus") == "Version table extracted"
+              for item in data
+          )
+
+          print(f"Total advisories: {len(data)}")
+          print(f"Version tables extracted: {valid}")
+
+          if valid == 0:
+              raise SystemExit("No version tables extracted")
+          PY
+
+      - name: Commit updated JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fortinet_advisories.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update Fortinet PSIRT advisories"
+            git push
+          fi
