@@ -1,4 +1,3 @@
-
 import json
 import re
 from datetime import datetime, timezone
@@ -9,6 +8,7 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 
+# Configuration
 RSS_URL = "https://filestore.fortinet.com/fortiguard/rss/ir.xml"
 OUTPUT_FILE = Path("fortinet_advisories.json")
 MAX_ITEMS = 20
@@ -35,6 +35,7 @@ def get_advisory(url):
     }
 
     parsed = urlparse(url)
+
     if parsed.hostname != "fortiguard.fortinet.com":
         raise ValueError("Unexpected advisory domain")
 
@@ -44,44 +45,72 @@ def get_advisory(url):
     soup = BeautifulSoup(response.text, "html.parser")
     text = soup.get_text(" ", strip=True)
 
+    # Extract CVE identifiers
     result["CVE"] = sorted(set(
         re.findall(r"CVE-\d{4}-\d{4,}", text, re.I)
     ))
 
+    # Extract severity
     for severity in ("Critical", "High", "Medium", "Low"):
-        if re.search(r"\bSeverity\s*:?\s*" + severity + r"\b",
-                     text, re.I):
+        if re.search(
+            r"\bSeverity\s*:?\s*" + severity + r"\b",
+            text,
+            re.I
+        ):
             result["Severity"] = severity.upper()
             break
 
-    # Extract only explicitly labelled version-table rows.
+    # Extract affected versions and solutions
     for table in soup.find_all("table"):
         headers = [
             clean(th.get_text(" ", strip=True)).lower()
             for th in table.find_all("th")
         ]
 
-        if not {"version", "affected", "solution"}.issubset(set(headers)):
+        if not {"version", "affected", "solution"}.issubset(
+            set(headers)
+        ):
             continue
 
         for row in table.find_all("tr"):
             cells = row.find_all("td")
+
             if len(cells) < 3:
                 continue
 
-            values = [clean(c.get_text(" ", strip=True))
-                      for c in cells]
+            values = [
+                clean(c.get_text(" ", strip=True))
+                for c in cells
+            ]
 
             product, affected, fixed = values[:3]
 
-            if product and affected:
+            if not product or not affected:
+                continue
+
+            # Exclude versions explicitly marked not affected
+            if affected.strip().lower() in (
+                "not affected",
+                "not applicable",
+                "n/a"
+            ):
+                continue
+
+            # Avoid duplicate product names
+            if product not in result["AffectedProduct"]:
                 result["AffectedProduct"].append(product)
-                result["AffectedVersions"].append(
-                    {"Product": product, "Versions": affected}
-                )
-                result["FixedVersion"].append(
-                    {"Product": product, "Solution": fixed}
-                )
+
+            # Preserve each affected version range
+            result["AffectedVersions"].append({
+                "Product": product,
+                "Versions": affected
+            })
+
+            # Preserve the corresponding solution
+            result["FixedVersion"].append({
+                "Product": product,
+                "Solution": fixed
+            })
 
     if result["AffectedVersions"]:
         result["ExtractionStatus"] = "Version table extracted"
@@ -104,6 +133,7 @@ def main():
 
     for entry in feed.entries[:MAX_ITEMS]:
         url = entry.get("link", "")
+
         if not url:
             continue
 
@@ -112,7 +142,9 @@ def main():
             "Title": clean(entry.get("title", "")),
             "URL": url,
             "PublishedDate": entry.get("published", ""),
-            "CollectedAt": datetime.now(timezone.utc).isoformat()
+            "CollectedAt": datetime.now(
+                timezone.utc
+            ).isoformat()
         }
 
         try:
@@ -124,7 +156,11 @@ def main():
         advisories.append(record)
 
     OUTPUT_FILE.write_text(
-        json.dumps(advisories, indent=2, ensure_ascii=False),
+        json.dumps(
+            advisories,
+            indent=2,
+            ensure_ascii=False
+        ),
         encoding="utf-8"
     )
 
@@ -141,4 +177,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
