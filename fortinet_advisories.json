@@ -1,0 +1,2333 @@
+[
+  {
+    "Vendor": "Fortinet",
+    "Title": "Allocation of resources without limits or throttling in fastapi",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-258",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:53.989098+00:00",
+    "AffectedProduct": [
+      "FortiAuthenticator 8.0",
+      "FortiAuthenticator 6.6"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiAuthenticator 8.0",
+        "Versions": "8.0.0 through 8.0.3"
+      },
+      {
+        "Product": "FortiAuthenticator 6.6",
+        "Versions": "6.6.0 through 6.6.10"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiAuthenticator 8.0",
+        "Solution": "Upgrade to 8.0.4 or above"
+      },
+      {
+        "Product": "FortiAuthenticator 6.6",
+        "Solution": "Upgrade to 6.6.11 or above"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126244"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Arbitrary file write and delete in JSON API",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-190",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:54.887941+00:00",
+    "AffectedProduct": [
+      "FortiAnalyzer 8.0",
+      "FortiAnalyzer 7.6",
+      "FortiAnalyzer 7.4",
+      "FortiAnalyzer 7.2",
+      "FortiManager 8.0",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager Cloud 8.0",
+      "FortiManager Cloud 7.6",
+      "FortiManager Cloud 7.4",
+      "FortiManager Cloud 7.2"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Versions": "7.6.0 through 7.6.4"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Versions": "7.4.0 through 7.4.7"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Versions": "7.2.0 through 7.2.11"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Versions": "7.6.0 through 7.6.4"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Versions": "7.4.0 through 7.4.7"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Versions": "7.2.0 through 7.2.11"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.4"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.7"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Versions": "7.2.1 through 7.2.10"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Solution": "Upgrade to 7.6.5 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Solution": "Upgrade to 7.4.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Solution": "Upgrade to 7.2.12 or above"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Solution": "Upgrade to 7.6.5 or above"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Solution": "Upgrade to 7.4.8 or above"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Solution": "Upgrade to 7.2.12 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Solution": "Upgrade to 7.6.5 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Solution": "Upgrade to 7.4.8 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Solution": "Upgrade to 7.2.11 or above"
+      }
+    ],
+    "CVE": [
+      "CVE-2025-61625"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Authentication bypass",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-271",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:55.147284+00:00",
+    "AffectedProduct": [
+      "FortiAuthenticator 8.0",
+      "FortiAuthenticator 6.6"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiAuthenticator 8.0",
+        "Versions": "8.0.0 through 8.0.3"
+      },
+      {
+        "Product": "FortiAuthenticator 6.6",
+        "Versions": "6.6.0 through 6.6.10"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiAuthenticator 8.0",
+        "Solution": "Upgrade to 8.0.4 or above"
+      },
+      {
+        "Product": "FortiAuthenticator 6.6",
+        "Solution": "Upgrade to 6.6.11 or above"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126257"
+    ],
+    "Severity": "CRITICAL",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Authentication bypass by primary weakness",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-267",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:55.400948+00:00",
+    "AffectedProduct": [
+      "FortiOS 8.0",
+      "FortiOS 7.6",
+      "FortiOS 7.4",
+      "FortiOS 7.2",
+      "FortiOS 7.0",
+      "FortiSASE 26.3",
+      "FortiSASE 26.3",
+      "FortiSASE 26.2",
+      "FortiSASE 26.1",
+      "FortiSASE 25.4",
+      "FortiSASE 25.3",
+      "FortiSASE 25.2",
+      "FortiSASE 25.1.a",
+      "FortiSASE 25.1",
+      "FortiSASE 24.4",
+      "FortiSASE 24.3",
+      "FortiSASE 24.1",
+      "FortiSASE 23.4",
+      "FortiSASE 23.3",
+      "FortiSASE 23.2",
+      "FortiSASE 23.1",
+      "FortiSASE 22.4"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiOS 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiOS 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiOS 7.4",
+        "Versions": "7.4.0 through 7.4.12"
+      },
+      {
+        "Product": "FortiOS 7.2",
+        "Versions": "7.2.0 through 7.2.13"
+      },
+      {
+        "Product": "FortiOS 7.0",
+        "Versions": "7.0.1 through 7.0.19"
+      },
+      {
+        "Product": "FortiSASE 26.3",
+        "Versions": "26.3.1"
+      },
+      {
+        "Product": "FortiSASE 26.3",
+        "Versions": "26.3.1_a"
+      },
+      {
+        "Product": "FortiSASE 26.2",
+        "Versions": "26.2 all versions"
+      },
+      {
+        "Product": "FortiSASE 26.1",
+        "Versions": "26.1 all versions"
+      },
+      {
+        "Product": "FortiSASE 25.4",
+        "Versions": "25.4 all versions"
+      },
+      {
+        "Product": "FortiSASE 25.3",
+        "Versions": "25.3 all versions"
+      },
+      {
+        "Product": "FortiSASE 25.2",
+        "Versions": "25.2 all versions"
+      },
+      {
+        "Product": "FortiSASE 25.1.a",
+        "Versions": "25.1.a all versions"
+      },
+      {
+        "Product": "FortiSASE 25.1",
+        "Versions": "25.1 all versions"
+      },
+      {
+        "Product": "FortiSASE 24.4",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiSASE 24.3",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiSASE 24.1",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiSASE 23.4",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiSASE 23.3",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiSASE 23.2",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiSASE 23.1",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiSASE 22.4",
+        "Versions": "Not affected"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiOS 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiOS 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiOS 7.4",
+        "Solution": "Upgrade to 7.4.13 or above"
+      },
+      {
+        "Product": "FortiOS 7.2",
+        "Solution": "Upgrade to 7.2.14 or above"
+      },
+      {
+        "Product": "FortiOS 7.0",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE 26.3",
+        "Solution": "Fortinet remediated this issue in 26.3.2 and hence customers do not need to perform any action."
+      },
+      {
+        "Product": "FortiSASE 26.3",
+        "Solution": "Fortinet remediated this issue in 26.3.2 and hence customers do not need to perform any action."
+      },
+      {
+        "Product": "FortiSASE 26.2",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE 26.1",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE 25.4",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE 25.3",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE 25.2",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE 25.1.a",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE 25.1",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE 24.4",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiSASE 24.3",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiSASE 24.1",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiSASE 23.4",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiSASE 23.3",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiSASE 23.2",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiSASE 23.1",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiSASE 22.4",
+        "Solution": "Not Applicable"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126253"
+    ],
+    "Severity": "CRITICAL",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Authentication bypass by spoofing",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-229",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:55.655362+00:00",
+    "AffectedProduct": [
+      "FortiAnalyzer 8.0",
+      "FortiAnalyzer 7.6",
+      "FortiAnalyzer 7.4",
+      "FortiAnalyzer 7.2",
+      "FortiAnalyzer Cloud 8.0",
+      "FortiAnalyzer Cloud 7.6",
+      "FortiAnalyzer Cloud 7.4",
+      "FortiAnalyzer Cloud 7.2",
+      "FortiManager 8.0",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager Cloud 8.0",
+      "FortiManager Cloud 7.6",
+      "FortiManager Cloud 7.4",
+      "FortiManager Cloud 7.2"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Versions": "7.2.0 through 7.2.12"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Versions": "8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Versions": "7.2.1 through 7.2.12"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Versions": "7.2.0 through 7.2.12"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Versions": "8.0.1"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Versions": "7.2.1 through 7.2.12"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126184"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Authorization bypass through user-controlled key",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-208",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:55.924624+00:00",
+    "AffectedProduct": [
+      "FortiMail 8.0",
+      "FortiMail 7.6",
+      "FortiMail 7.4",
+      "FortiMail 7.2"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiMail 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiMail 7.6",
+        "Versions": "7.6.0 through 7.6.6"
+      },
+      {
+        "Product": "FortiMail 7.4",
+        "Versions": "7.4.0 through 7.4.8"
+      },
+      {
+        "Product": "FortiMail 7.2",
+        "Versions": "7.2 all versions"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiMail 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiMail 7.6",
+        "Solution": "Upgrade to 7.6.7 or above"
+      },
+      {
+        "Product": "FortiMail 7.4",
+        "Solution": "Upgrade to 7.4.9 or above"
+      },
+      {
+        "Product": "FortiMail 7.2",
+        "Solution": "Migrate to a fixed release"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126156"
+    ],
+    "Severity": "CRITICAL",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Authorization bypass through user-controlled key",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-235",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:56.180286+00:00",
+    "AffectedProduct": [
+      "FortiManager 8.0",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiManager 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Versions": "Not affected"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiManager 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Solution": "Not Applicable"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126218"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Authorization bypass through user-controlled key",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-204",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:56.430760+00:00",
+    "AffectedProduct": [
+      "FortiMail 8.0",
+      "FortiMail 7.6",
+      "FortiMail 7.4",
+      "FortiMail 7.2",
+      "FortiMail 7.0"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiMail 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiMail 7.6",
+        "Versions": "7.6.0 through 7.6.6"
+      },
+      {
+        "Product": "FortiMail 7.4",
+        "Versions": "7.4.0 through 7.4.8"
+      },
+      {
+        "Product": "FortiMail 7.2",
+        "Versions": "7.2 all versions"
+      },
+      {
+        "Product": "FortiMail 7.0",
+        "Versions": "7.0 all versions"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiMail 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiMail 7.6",
+        "Solution": "Upgrade to 7.6.7 or above"
+      },
+      {
+        "Product": "FortiMail 7.4",
+        "Solution": "Upgrade to 7.4.9 or above"
+      },
+      {
+        "Product": "FortiMail 7.2",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiMail 7.0",
+        "Solution": "Migrate to a fixed release"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126152"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Authorization bypass through user-controlled key",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-211",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:56.682940+00:00",
+    "AffectedProduct": [
+      "FortiMail 8.0",
+      "FortiMail 7.6",
+      "FortiMail 7.4",
+      "FortiMail 7.2"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiMail 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiMail 7.6",
+        "Versions": "7.6.0 through 7.6.6"
+      },
+      {
+        "Product": "FortiMail 7.4",
+        "Versions": "7.4.0 through 7.4.8"
+      },
+      {
+        "Product": "FortiMail 7.2",
+        "Versions": "7.2 all versions"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiMail 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiMail 7.6",
+        "Solution": "Upgrade to 7.6.7 or above"
+      },
+      {
+        "Product": "FortiMail 7.4",
+        "Solution": "Upgrade to 7.4.9 or above"
+      },
+      {
+        "Product": "FortiMail 7.2",
+        "Solution": "Migrate to a fixed release"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126159"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Authorization bypass through user-controlled key in GUI",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-228",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:56.929805+00:00",
+    "AffectedProduct": [
+      "FortiManager 8.0",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager Cloud 8.0",
+      "FortiManager Cloud 7.6",
+      "FortiManager Cloud 7.4",
+      "FortiManager Cloud 7.2",
+      "FortiSASE-Sovereign 26.2",
+      "FortiSASE-Sovereign 25.4",
+      "FortiSASE-Sovereign 25.3",
+      "FortiSASE-Sovereign 25"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiManager 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Versions": "7.2.0 through 7.2.12"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Versions": "8.0.1"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Versions": "7.2.1 through 7.2.12"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 26.2",
+        "Versions": "26.2 all versions"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25.4",
+        "Versions": "25.4 all versions"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25.3",
+        "Versions": "25.3 all versions"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25",
+        "Versions": "25 all versions"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiManager 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Solution": "Upgrade to upcoming 7.4.13 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 26.2",
+        "Solution": "Fortinet remediated this issue in 26.2 (not released) and hence customers do not need to perform any action."
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25.4",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25.3",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25",
+        "Solution": "Migrate to a fixed release"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126183"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Authorization bypass through user-controlled key in dmserver",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-244",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:57.259665+00:00",
+    "AffectedProduct": [
+      "FortiAnalyzer 8.0",
+      "FortiAnalyzer 7.6",
+      "FortiAnalyzer 7.4",
+      "FortiAnalyzer 7.2",
+      "FortiAnalyzer 7.0",
+      "FortiAnalyzer Cloud 8.0",
+      "FortiAnalyzer Cloud 7.6",
+      "FortiAnalyzer Cloud 7.4",
+      "FortiAnalyzer Cloud 7.2",
+      "FortiAnalyzer Cloud 7.0",
+      "FortiManager 8.0",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager 7.0",
+      "FortiManager Cloud 8.0",
+      "FortiManager Cloud 7.6",
+      "FortiManager Cloud 7.4",
+      "FortiManager Cloud 7.2",
+      "FortiManager Cloud 7.0"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Versions": "7.2.0 through 7.2.12"
+      },
+      {
+        "Product": "FortiAnalyzer 7.0",
+        "Versions": "7.0 all versions"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Versions": "8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Versions": "7.2.1 through 7.2.12"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.0",
+        "Versions": "7.0 all versions"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Versions": "7.2.0 through 7.2.12"
+      },
+      {
+        "Product": "FortiManager 7.0",
+        "Versions": "7.0 all versions"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Versions": "8.0.1"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Versions": "7.2.1 through 7.2.12"
+      },
+      {
+        "Product": "FortiManager Cloud 7.0",
+        "Versions": "7.0 all versions"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.0",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.0",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiManager 7.0",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.0",
+        "Solution": "Migrate to a fixed release"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126229"
+    ],
+    "Severity": "CRITICAL",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Broken Access Control in Two-Factor-Authentication",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-195",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:57.514787+00:00",
+    "AffectedProduct": [
+      "FortiOS 8.0",
+      "FortiOS 7.6",
+      "FortiOS 7.4",
+      "FortiOS 7.2"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiOS 8.0",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiOS 7.6",
+        "Versions": "7.6.0 through 7.6.6"
+      },
+      {
+        "Product": "FortiOS 7.4",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiOS 7.2",
+        "Versions": "Not affected"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiOS 8.0",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiOS 7.6",
+        "Solution": "Upgrade to 7.6.7 or above"
+      },
+      {
+        "Product": "FortiOS 7.4",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiOS 7.2",
+        "Solution": "Not Applicable"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-121530"
+    ],
+    "Severity": "MEDIUM",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "FGFM elevation before registration password is verified",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-275",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:57.787319+00:00",
+    "AffectedProduct": [
+      "FortiManager 8.0",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiManager 8.0",
+        "Versions": "8.0.0"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Versions": "7.4.0 through 7.4.5"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Versions": "7.2.0 through 7.2.8"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiManager 8.0",
+        "Solution": "Upgrade to 8.0.1 or above"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Solution": "Upgrade to 7.4.6 or above"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Solution": "Upgrade to 7.2.9 or above"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126261"
+    ],
+    "Severity": "CRITICAL",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Heap-based buffer overflow",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-232",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:58.021232+00:00",
+    "AffectedProduct": [
+      "FortiAnalyzer 8.0",
+      "FortiAnalyzer 7.6",
+      "FortiAnalyzer 7.4",
+      "FortiAnalyzer 7.2",
+      "FortiAnalyzer Cloud 8.0",
+      "FortiAnalyzer Cloud 7.6",
+      "FortiAnalyzer Cloud 7.4",
+      "FortiAnalyzer Cloud 7.2",
+      "FortiManager 8.0",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager Cloud 8.0",
+      "FortiManager Cloud 7.6",
+      "FortiManager Cloud 7.4",
+      "FortiManager Cloud 7.2"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Versions": "Not affected"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Solution": "Not Applicable"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126212"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Heap-based buffer overflow",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-223",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:58.295685+00:00",
+    "AffectedProduct": [
+      "FortiAnalyzer 8.0",
+      "FortiAnalyzer 7.6",
+      "FortiAnalyzer 7.4",
+      "FortiAnalyzer 7.2",
+      "FortiAnalyzer Cloud 8.0",
+      "FortiAnalyzer Cloud 7.6",
+      "FortiAnalyzer Cloud 7.4",
+      "FortiAnalyzer Cloud 7.2",
+      "FortiManager 8.0",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager Cloud 8.0",
+      "FortiManager Cloud 7.6",
+      "FortiManager Cloud 7.4",
+      "FortiManager Cloud 7.2"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Versions": "7.2.0 through 7.2.12"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Versions": "7.2.1 through 7.2.12"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Versions": "7.2.0 through 7.2.12"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Versions": "7.2.1 through 7.2.12"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126178"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Improper authentication in releasecontrol",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-212",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:58.676286+00:00",
+    "AffectedProduct": [
+      "FortiMail 8.0",
+      "FortiMail 7.6",
+      "FortiMail 7.4",
+      "FortiMail 7.2"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiMail 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiMail 7.6",
+        "Versions": "7.6.0 through 7.6.6"
+      },
+      {
+        "Product": "FortiMail 7.4",
+        "Versions": "7.4.0 through 7.4.8"
+      },
+      {
+        "Product": "FortiMail 7.2",
+        "Versions": "7.2 all versions"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiMail 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiMail 7.6",
+        "Solution": "Upgrade to 7.6.7 or above"
+      },
+      {
+        "Product": "FortiMail 7.4",
+        "Solution": "Upgrade to 7.4.9 or above"
+      },
+      {
+        "Product": "FortiMail 7.2",
+        "Solution": "Migrate to a fixed release"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126160"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Improper certificate validation in RADIUS protocol",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-247",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:59.070629+00:00",
+    "AffectedProduct": [
+      "FortiAnalyzer 8.0",
+      "FortiAnalyzer 7.6",
+      "FortiAnalyzer 7.4",
+      "FortiAnalyzer 7.2",
+      "FortiAnalyzer Cloud 8.0",
+      "FortiAnalyzer Cloud 7.6",
+      "FortiAnalyzer Cloud 7.4",
+      "FortiAnalyzer Cloud 7.2",
+      "FortiManager 8.0",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager Cloud 8.0",
+      "FortiManager Cloud 7.6",
+      "FortiManager Cloud 7.4",
+      "FortiManager Cloud 7.2",
+      "FortiSASE-Sovereign 26.2",
+      "FortiSASE-Sovereign 25.4",
+      "FortiSASE-Sovereign 25.3",
+      "FortiSASE-Sovereign 25"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Versions": "7.2 all versions"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Versions": "8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Versions": "7.2 all versions"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Versions": "7.2 all versions"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Versions": "8.0.1"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Versions": "7.2 all versions"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 26.2",
+        "Versions": "26.2 all versions"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25.4",
+        "Versions": "25.4 all versions"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25.3",
+        "Versions": "25.3 all versions"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25",
+        "Versions": "25 all versions"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 26.2",
+        "Solution": "Fortinet remediated this issue in 26.2 (not released) and hence customers do not need to perform any action."
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25.4",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25.3",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25",
+        "Solution": "Migrate to a fixed release"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126232"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Improper control of generation of code",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-230",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:59.449216+00:00",
+    "AffectedProduct": [
+      "FortiAnalyzer 8.0",
+      "FortiAnalyzer 7.6",
+      "FortiAnalyzer 7.4",
+      "FortiAnalyzer 7.2",
+      "FortiAnalyzer Cloud 8.0",
+      "FortiAnalyzer Cloud 7.6",
+      "FortiAnalyzer Cloud 7.4",
+      "FortiAnalyzer Cloud 7.2",
+      "FortiManager 8.0",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager Cloud 8.0",
+      "FortiManager Cloud 7.6",
+      "FortiManager Cloud 7.4",
+      "FortiManager Cloud 7.2"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Versions": "Not affected"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Solution": "Not Applicable"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126185"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Improper control of generation of code in GUI",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-227",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:59.717886+00:00",
+    "AffectedProduct": [
+      "FortiAnalyzer 8.0",
+      "FortiAnalyzer 7.6",
+      "FortiAnalyzer 7.4",
+      "FortiAnalyzer 7.2",
+      "FortiAnalyzer Cloud 8.0",
+      "FortiAnalyzer Cloud 7.6",
+      "FortiAnalyzer Cloud 7.4",
+      "FortiAnalyzer Cloud 7.2",
+      "FortiManager 8.0",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager Cloud 8.0",
+      "FortiManager Cloud 7.6",
+      "FortiManager Cloud 7.4",
+      "FortiManager Cloud 7.2",
+      "FortiSASE-Sovereign 26.2",
+      "FortiSASE-Sovereign 25.4",
+      "FortiSASE-Sovereign 25.3",
+      "FortiSASE-Sovereign 25"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Versions": "7.2.0 through 7.2.12"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Versions": "7.2.1 through 7.2.12"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Versions": "7.4.0 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Versions": "7.2.0 through 7.2.12"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Versions": "7.6.0 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Versions": "7.4.1 through 7.4.11"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Versions": "7.2.1 through 7.2.12"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 26.2",
+        "Versions": "26.2 all versions"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25.4",
+        "Versions": "25.4 all versions"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25.3",
+        "Versions": "25.3 all versions"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25",
+        "Versions": "25 all versions"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Solution": "Upgrade to 7.4.12 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Solution": "Upgrade to 7.2.13 or above"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 26.2",
+        "Solution": "Fortinet remediated this issue in 26.2 (not released) and hence customers do not need to perform any action."
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25.4",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25.3",
+        "Solution": "Migrate to a fixed release"
+      },
+      {
+        "Product": "FortiSASE-Sovereign 25",
+        "Solution": "Migrate to a fixed release"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126182"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Improper limitation of a pathname to a restricted directory",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-237",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-12T12:08:59.982202+00:00",
+    "AffectedProduct": [
+      "FortiAnalyzer 8.0",
+      "FortiAnalyzer 7.6",
+      "FortiAnalyzer 7.4",
+      "FortiAnalyzer 7.2",
+      "FortiAnalyzer Cloud 8.0",
+      "FortiAnalyzer Cloud 7.6",
+      "FortiAnalyzer Cloud 7.4",
+      "FortiAnalyzer Cloud 7.2",
+      "FortiManager 8.0",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager Cloud 8.0",
+      "FortiManager Cloud 7.6",
+      "FortiManager Cloud 7.4",
+      "FortiManager Cloud 7.2"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Versions": "7.6.3 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Versions": "7.6.3 through 7.6.7"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Versions": "7.6.3 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Versions": "7.6.3 through 7.6.7"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Versions": "Not affected"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Versions": "Not affected"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiAnalyzer 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer 7.4",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiAnalyzer 7.2",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.4",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiAnalyzer Cloud 7.2",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiManager 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager 7.4",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiManager 7.2",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiManager Cloud 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.6",
+        "Solution": "Upgrade to 7.6.8 or above"
+      },
+      {
+        "Product": "FortiManager Cloud 7.4",
+        "Solution": "Not Applicable"
+      },
+      {
+        "Product": "FortiManager Cloud 7.2",
+        "Solution": "Not Applicable"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126222"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted"
+  }
+]
