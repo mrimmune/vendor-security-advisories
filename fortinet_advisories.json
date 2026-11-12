@@ -4,7 +4,7 @@
     "Title": "Allocation of resources without limits or throttling in fastapi",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-258",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:57.425225+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiAuthenticator 8.0",
       "FortiAuthenticator 6.6"
@@ -33,14 +33,16 @@
       "CVE-2026-126244"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "c51590640a448d1b23526f50b099a22cfc7c187295ef5938a8151fa44eb447da"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Arbitrary file write and delete in JSON API",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-190",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:58.405395+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 7.6",
       "FortiAnalyzer 7.4",
@@ -132,14 +134,16 @@
       "CVE-2025-61625"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "248d5d3de14b0442c9ac0dd45a176526a9f6ad4dcd3ccd90a391822550f489f2"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Authentication bypass",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-271",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:58.480433+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiAuthenticator 8.0",
       "FortiAuthenticator 6.6"
@@ -168,14 +172,16 @@
       "CVE-2026-126257"
     ],
     "Severity": "CRITICAL",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "6f2138bb18ac0ad165f9cdb974cd1a2b2d6d77a1c543bb72b91705c8a78f7db5"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Authentication bypass by primary weakness",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-267",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:58.552834+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiOS 8.0",
       "FortiOS 7.6",
@@ -311,14 +317,16 @@
       "CVE-2026-126253"
     ],
     "Severity": "CRITICAL",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "13d0642b6aed6e418a70c4bdd65a162a3a6efb1fa43e094804d9ce8f8d0d65de"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Authentication bypass by spoofing",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-229",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:58.630026+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -473,14 +481,16 @@
       "CVE-2026-126184"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "3b24d15d5ef1112e1ab46a5b0540362eb59926fe77cf1b86974bf644ad3bbc39"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Authorization bypass through user-controlled key",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-208",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:58.714898+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiMail 8.0",
       "FortiMail 7.6",
@@ -527,14 +537,16 @@
       "CVE-2026-126156"
     ],
     "Severity": "CRITICAL",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "d0b1c7a7cfc6dbb69e18b470aa8d413883f1aab260c56380a2d485ae0c02b1cf"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Authorization bypass through user-controlled key",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-235",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:58.776087+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiManager 8.0",
       "FortiManager 7.6",
@@ -572,14 +584,16 @@
       "CVE-2026-126218"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "5026b3fbf33e710112bfd9b3480627fbcd954f3d87d63998e7d268ab5cc57837"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Authorization bypass through user-controlled key",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-204",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:58.840808+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiMail 8.0",
       "FortiMail 7.6",
@@ -635,14 +649,16 @@
       "CVE-2026-126152"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "e9f9522711ef8c8dad6e74e86d0ce251afff51469b2f6c2b05d8efa63606f63a"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Authorization bypass through user-controlled key",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-211",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:58.901399+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiMail 8.0",
       "FortiMail 7.6",
@@ -689,14 +705,16 @@
       "CVE-2026-126159"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "dd5699f876615f8d2fc1f4914a466370e474d2489130f5b0d61ce4e2d5086c10"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Authorization bypass through user-controlled key in GUI",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-228",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:58.970288+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiManager 8.0",
       "FortiManager 7.6",
@@ -815,14 +833,16 @@
       "CVE-2026-126183"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "3055a687958f9247c8e357c3e5ca924249960906b58937581a1ae9f92c82ded4"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Authorization bypass through user-controlled key in dmserver",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-244",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:59.041268+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -1013,14 +1033,16 @@
       "CVE-2026-126229"
     ],
     "Severity": "CRITICAL",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "47f27c017048cde32e03fd31ac1e7df86b7c15bdc607328581a54137f7584ebb"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Broken Access Control in Two-Factor-Authentication",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-195",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:59.137955+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiOS 7.6"
     ],
@@ -1040,14 +1062,16 @@
       "CVE-2026-121530"
     ],
     "Severity": "MEDIUM",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "82132af4e89e0a18ca4c2e6709ee94502baabc273ca20fe3a592def2746f5d44"
   },
   {
     "Vendor": "Fortinet",
     "Title": "FGFM elevation before registration password is verified",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-275",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:59.213096+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiManager 8.0",
       "FortiManager 7.6",
@@ -1094,14 +1118,16 @@
       "CVE-2026-126261"
     ],
     "Severity": "CRITICAL",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "1c120c77294423313ead2d8a66a42d1d44f803f70644fa85f1e298161bf0db6e"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Heap-based buffer overflow",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-232",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:59.282556+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -1220,14 +1246,16 @@
       "CVE-2026-126212"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "8d07d0170e5c6ce9a76a0f919eeceea09605754b2a7f7fefe08b3f33660fbd46"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Heap-based buffer overflow",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-223",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:59.354433+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -1382,14 +1410,16 @@
       "CVE-2026-126178"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "fb8f717bd9a36b5391ee23065a5c933ec78ec6a8ba59af71058bc3f684e66274"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Improper authentication in releasecontrol",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-212",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:59.417685+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiMail 8.0",
       "FortiMail 7.6",
@@ -1436,14 +1466,16 @@
       "CVE-2026-126160"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "e3ca2417971846791eca5312fcfe6199a02d0692a53e01aa7163cbe40c1cbed3"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Improper certificate validation in RADIUS protocol",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-247",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:59.503533+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -1634,14 +1666,16 @@
       "CVE-2026-126232"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "959d39f19aac5a2279608a59e235e46d257b011cddb6cc4bc09b8466e1bd5e1c"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Improper control of generation of code",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-230",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:59.569906+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -1760,14 +1794,16 @@
       "CVE-2026-126185"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "fd091fda734a0f2ad120466deee751a8e663011c25bd70df2475e2d67e7f1eb9"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Improper control of generation of code in GUI",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-227",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:59.631151+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -1958,14 +1994,16 @@
       "CVE-2026-126182"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "9f3a6cd3d45e15936a700b7e1c594200af303e7cebb2246353cad749b4bf8d22"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Improper limitation of a pathname to a restricted directory",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-237",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-12T12:50:59.706335+00:00",
+    "CollectedAt": "2026-11-12T13:26:39.593863+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -2048,6 +2086,8 @@
       "CVE-2026-126222"
     ],
     "Severity": "HIGH",
-    "ExtractionStatus": "Version table extracted"
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "",
+    "ContentHash": "006eacb411bd039e7ffcf037009540a8ad24d7450cbaf531dd387787c35619dd"
   }
 ]
