@@ -265,12 +265,25 @@ def make_rss(advisories):
                 item, 'pubDate'
             ).text = updated or published
 
+        affected_versions_text = '\n'.join(
+            f"{row.get('Product', '')}: {row.get('Versions', '')}"
+            for row in record['AffectedVersions']
+            if isinstance(row, dict)
+        )
+        fixed_version_text = '\n'.join(
+            f"{row.get('Product', '')}: {row.get('Solution', '')}"
+            for row in record['FixedVersion']
+            if isinstance(row, dict)
+        )
+
         description = {
             'Severity': record['Severity'],
             'CVE': record['CVE'],
             'AffectedProduct': record['AffectedProduct'],
             'AffectedVersions': record['AffectedVersions'],
             'FixedVersion': record['FixedVersion'],
+            'AffectedVersionsText': affected_versions_text,
+            'FixedVersionText': fixed_version_text,
             'ExtractionStatus': record['ExtractionStatus'],
             'OriginalPublishedDate': record.get(
                 'PublishedDate', ''
