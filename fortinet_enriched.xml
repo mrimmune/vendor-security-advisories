@@ -5,7 +5,7 @@
     <link>https://fortiguard.fortinet.com/psirt</link>
     <description>Fortinet PSIRT advisories enriched with affected and fixed versions</description>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 14:14:31 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 13:54:45 +0000</lastBuildDate>
     <item>
       <title>Unauthenticated adjacent command execution via HA</title>
       <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-273</link>
