@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cisco PSIRT Collector v3: conservative CSAF enrichment and fixed-release tables."""
+"""Cisco PSIRT Collector v4: CSAF and verified fixed-release HTML table enrichment."""
 import json
 import html
 import os
@@ -221,6 +221,60 @@ def extract_explicit_fixed_notes(csaf):
     return sorted(results)
 
 
+def _fixed_table_from_html(page_html):
+    """Only trust cells in a table with an explicit First Fixed/Fixed Release header."""
+    result = set()
+    for context, cell in _explicit_fixed_table_rows(page_html):
+        release = _clean_fixed_cell(cell)
+        context = ' '.join(context.split())
+        if not release or not context or len(context) > 100:
+            continue
+        # Exclude non-release instructions; do not infer a patch from affected versions.
+        if re.search(r'migrate|upgrade|contact|not affected|see|n/a', release, re.I):
+            continue
+        result.add(f'{context} -> {release}')
+    return sorted(result)
+
+
+def fetch_fixed_from_advisory_html(session, url):
+    """Fallback to Cisco's public HTML page; fail closed if the page is inaccessible."""
+    if not url.startswith('https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/'):
+        return []
+    try:
+        response = session.get(url, timeout=25, headers={'Accept': 'text/html'})
+        response.raise_for_status()
+        if len(response.content) > 4_000_000:
+            return []
+        return _fixed_table_from_html(response.text)
+    except requests.RequestException as exc:
+        print(f'WARNING: advisory HTML unavailable: {url}: {exc}')
+        return []
+
+
+def extract_fixed_from_csaf_text(csaf):
+    """Conservative support for plaintext Cisco fixed-release tables in CSAF notes.
+
+    Cisco serializes some HTML tables into flat text; only explicit 'First Fixed
+    Release' followed by 'Patch' values can be reliably recognized without
+    row boundaries. Product-specific logic is not inferred from unrelated prose.
+    """
+    title = str((csaf.get('document') or {}).get('title') or '')
+    if 'Identity Services Engine' not in title:
+        return []
+    results = set()
+    for note in (csaf.get('document') or {}).get('notes') or []:
+        if str(note.get('title') or '').lower() != 'fixed software':
+            continue
+        body = html.unescape(str(note.get('text') or ''))
+        if 'First Fixed Release' not in body:
+            continue
+        # Parse only row-like pairs, not free-floating patch numbers.
+        for m in re.finditer(r'(?<![\w.])(3\.[1-5])(?:\s*\([^)]{1,40}\))?\s+(3\.[1-5]\s+Patch\s+\d+)\b', body, re.I):
+            if m.group(2).split()[0] == m.group(1):
+                results.add('Cisco ISE ' + m.group(2))
+    return sorted(results)
+
+
 def enrich_from_csaf(csaf):
     names = product_id_names(csaf)
     affected = set()
@@ -243,6 +297,7 @@ def enrich_from_csaf(csaf):
     # NOT to fixed releases. Never use them for FixedVersion.
     # Explicit table releases complement CSAF fixed/first_fixed product statuses.
     fixed.update(extract_explicit_fixed_notes(csaf))
+    fixed.update(extract_fixed_from_csaf_text(csaf))
     return sorted(x for x in affected if versioned_name(x)), sorted(fixed), sorted(unresolved)
 
 
@@ -330,7 +385,10 @@ def main():
         if csaf:
             affected, fixed, unresolved = enrich_from_csaf(csaf)
             record['AffectedVersions'] = affected
-            record['FixedVersion'] = fixed
+            # Only supplement CSAF with first-fixed releases explicitly present
+            # in a Cisco advisory HTML table. No inferred release numbers.
+            html_fixed = fetch_fixed_from_advisory_html(session, record['URL']) if not fixed else []
+            record['FixedVersion'] = sorted(set(fixed) | set(html_fixed))
             families = sorted({p for p in record['AffectedProduct'] if p != 'NA' and not versioned_name(p)})
             # Some API product names are version leaves (e.g. CUCM 14SU1).
             # Preserve them as affected only if CSAF explicitly marks them affected.
@@ -354,6 +412,8 @@ def main():
     ET.indent(rss, space='  ')
     ET.ElementTree(rss).write(BASE / 'cisco_enriched.xml', encoding='utf-8', xml_declaration=True)
     print(f'Collected {len(output)} Cisco advisories; wrote JSON and RSS')
+    print('With fixed releases:', sum(bool(x['FixedVersion']) for x in output))
+    print('With affected releases:', sum(bool(x['AffectedVersions']) for x in output))
     print('Severity counts:', {s: sum(x['Severity'] == s for x in output) for s in sorted(set(x['Severity'] for x in output))})
 
 
