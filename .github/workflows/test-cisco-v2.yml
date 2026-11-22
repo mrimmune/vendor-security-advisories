@@ -1,0 +1,72 @@
+
+name: Test Cisco Collector V2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout test branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install requests
+
+      - name: Check Python syntax
+        run: python -m py_compile cisco_collector.py
+
+      - name: Run Cisco Collector
+        env:
+          CISCO_CLIENT_ID: ${{ secrets.CISCO_CLIENT_ID }}
+          CISCO_CLIENT_SECRET: ${{ secrets.CISCO_CLIENT_SECRET }}
+        run: python cisco_collector.py
+
+      - name: Validate generated files
+        run: |
+          python -m json.tool cisco_advisories.json > /dev/null
+          python - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+
+          with open("cisco_advisories.json", encoding="utf-8") as f:
+              records = json.load(f)
+
+          ET.parse("cisco_enriched.xml")
+
+          assert records, "No advisories generated"
+          required = {
+              "Vendor", "AdvisoryKey", "Title",
+              "AffectedProduct", "AffectedVersions",
+              "FixedVersion", "Severity"
+          }
+          for record in records:
+              assert required.issubset(record), record.get("AdvisoryKey")
+              for field in ("AffectedProduct", "AffectedVersions", "FixedVersion"):
+                  assert isinstance(record[field], list), field
+
+          print("Total advisories:", len(records))
+          print("AffectedVersions populated:",
+                sum(bool(r["AffectedVersions"]) for r in records))
+          print("FixedVersion populated:",
+                sum(bool(r["FixedVersion"]) for r in records))
+          PY
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: cisco-v2-test-results
+          path: |
+            cisco_advisories.json
+            cisco_enriched.xml
+          retention-days: 7
