@@ -1,0 +1,87 @@
+
+name: Cisco PSIRT Inspect
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-cisco:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Inspect Cisco PSIRT API
+        env:
+          CISCO_CLIENT_ID: ${{ secrets.CISCO_CLIENT_ID }}
+          CISCO_CLIENT_SECRET: ${{ secrets.CISCO_CLIENT_SECRET }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import requests
+
+          client_id = os.environ["CISCO_CLIENT_ID"]
+          client_secret = os.environ["CISCO_CLIENT_SECRET"]
+
+          auth = requests.post(
+              "https://id.cisco.com/oauth2/default/v1/token",
+              data={
+                  "grant_type": "client_credentials",
+                  "client_id": client_id,
+                  "client_secret": client_secret
+              },
+              timeout=30
+          )
+          print("OAuth status:", auth.status_code)
+          auth.raise_for_status()
+
+          token = auth.json()["access_token"]
+
+          response = requests.get(
+              "https://apix.cisco.com/security/advisories/v2/all",
+              headers={
+                  "Authorization": f"Bearer {token}",
+                  "Accept": "application/json"
+              },
+              params={
+                  "pageIndex": 1,
+                  "pageSize": 1,
+                  "productNames": "true"
+              },
+              timeout=30
+          )
+
+          print("PSIRT status:", response.status_code)
+          response.raise_for_status()
+
+          data = response.json()
+          advisories = data.get("advisories", [])
+
+          print("Advisory count:", len(advisories))
+
+          if not advisories:
+              raise SystemExit("No advisories returned")
+
+          advisory = advisories[0]
+
+          print("\n=== AVAILABLE FIELDS ===")
+          for key in advisory:
+              print(key, ":", type(advisory[key]).__name__)
+
+          print("\n=== SELECTED VALUES ===")
+          fields = [
+              "advisoryId",
+              "advisoryTitle",
+              "cves",
+              "sir",
+              "cvssBaseScore",
+              "productNames",
+              "firstPublished",
+              "lastUpdated",
+              "publicationUrl"
+          ]
+
+          for field in fields:
+              print(field, ":", str(advisory.get(field))[:1000])
+          PY
