@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cisco PSIRT Collector v4: CSAF and verified fixed-release HTML table enrichment."""
+"""Cisco PSIRT Collector v5: CSAF and verified fixed-release HTML table enrichment."""
 import json
 import html
 import os
@@ -163,21 +163,48 @@ def _explicit_fixed_table_rows(note_text):
                 yield context, row[j]
 
 
+def _is_planned_release(value, as_of=None):
+    """Conservatively exclude explicit future/TBD release schedules from available fixes."""
+    value = html.unescape(str(value or ''))
+    if re.search(r'\b(?:TBD|TBA|planned|scheduled|not yet available|future release|targeted|upcoming)\b', value, re.I):
+        return True
+    as_of = as_of or datetime.now(timezone.utc)
+    months = {name.lower(): i for i, name in enumerate(
+        ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'), 1)}
+    for m in re.finditer(r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(20\d{2})\b', value, re.I):
+        year, month = int(m.group(2)), months[m.group(1)[:3].lower()]
+        if (year, month) > (as_of.year, as_of.month):
+            return True
+    return False
+
+
 def _clean_fixed_cell(cell):
-    """Accept explicit release cells, reject placeholders and prose."""
+    """Validate a release cell, never accepting prose or a release-note hyperlink title."""
     cell = html.unescape(re.sub(r'<[^>]+>', ' ', str(cell or '')))
     cell = ' '.join(cell.split())
     if not cell or len(cell) > 130 or re.search(
-        r'not affected|not vulnerable|no fix|not applicable|under investigation|to be determined|contact tac|see (?:the|below)|\bnone\b|\bn/?a\b',
-        cell, re.I):
+        r'not affected|not vulnerable|no fix|not applicable|under investigation|to be determined|contact tac|'
+        r'see (?:the|below)|\bnone\b|\bn/?a\b|release notes|updated information|revision history|'
+        r'\b(?:TBD|TBA|planned|scheduled)\b', cell, re.I):
         return None
-    if not versioned_name(cell):
+    if _is_planned_release(cell) or not versioned_name(cell):
         return None
-    # Never interpret an entire explanatory sentence as a release.
     if len(cell.split()) > 12 or re.search(r'[.!?]\s+[A-Z]', cell):
         return None
     return cell
 
+
+def _clean_context(context):
+    context = ' '.join(html.unescape(str(context or '')).split())
+    if not context or len(context) > 100:
+        return None
+    if re.search(r'updated information|revision history|release notes|\b(?:TBD|TBA)\b', context, re.I):
+        return None
+    # Cisco revision-history rows can have numeric revisions like 1.2;
+    # require context to identify a software train, product, or affected range.
+    if re.fullmatch(r'\d+\.\d+', context) and re.search(r'^1\.[0-9]$', context):
+        return None
+    return context
 
 def product_families(csaf):
     """Read actual CSAF product-family nodes, not product-tree release leaves."""
@@ -211,14 +238,16 @@ def extract_explicit_fixed_notes(csaf):
             if not release:
                 continue
             # Only a release column plus an identifiable row context is accepted.
-            context = ' '.join(context.split())
-            if not context or len(context) > 100:
+            context = _clean_context(context)
+            if not context:
+                continue
+            if _is_planned_release(context + ' ' + release):
                 continue
             if release.lower() in context.lower():
                 results.add(context)
             else:
                 results.add(f'{context} -> {release}')
-    return sorted(results)
+    return sorted(x for x in results if not _is_planned_release(x))
 
 
 def _fixed_table_from_html(page_html):
@@ -226,11 +255,13 @@ def _fixed_table_from_html(page_html):
     result = set()
     for context, cell in _explicit_fixed_table_rows(page_html):
         release = _clean_fixed_cell(cell)
-        context = ' '.join(context.split())
-        if not release or not context or len(context) > 100:
+        context = _clean_context(context)
+        if not release or not context:
             continue
         # Exclude non-release instructions; do not infer a patch from affected versions.
         if re.search(r'migrate|upgrade|contact|not affected|see|n/a', release, re.I):
+            continue
+        if _is_planned_release(context + ' ' + release):
             continue
         result.add(f'{context} -> {release}')
     return sorted(result)
@@ -298,6 +329,7 @@ def enrich_from_csaf(csaf):
     # Explicit table releases complement CSAF fixed/first_fixed product statuses.
     fixed.update(extract_explicit_fixed_notes(csaf))
     fixed.update(extract_fixed_from_csaf_text(csaf))
+    fixed = {x for x in fixed if not _is_planned_release(x) and not re.search(r'updated information|release notes', x, re.I)}
     return sorted(x for x in affected if versioned_name(x)), sorted(fixed), sorted(unresolved)
 
 
@@ -412,6 +444,7 @@ def main():
     ET.indent(rss, space='  ')
     ET.ElementTree(rss).write(BASE / 'cisco_enriched.xml', encoding='utf-8', xml_declaration=True)
     print(f'Collected {len(output)} Cisco advisories; wrote JSON and RSS')
+    print('FixedVersion contains only releases without explicit future/TBD qualifiers; unknown availability is not independently verified.')
     print('With fixed releases:', sum(bool(x['FixedVersion']) for x in output))
     print('With affected releases:', sum(bool(x['AffectedVersions']) for x in output))
     print('Severity counts:', {s: sum(x['Severity'] == s for x in output) for s in sorted(set(x['Severity'] for x in output))})
