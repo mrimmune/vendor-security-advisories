@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cisco PSIRT Collector v5: CSAF and verified fixed-release HTML table enrichment."""
+"""Cisco PSIRT Collector v6: CSAF and verified fixed-release HTML table enrichment."""
 import json
 import html
 import os
@@ -333,6 +333,63 @@ def enrich_from_csaf(csaf):
     return sorted(x for x in affected if versioned_name(x)), sorted(fixed), sorted(unresolved)
 
 
+
+def normalize_fixed_entries(entries):
+    """Remove exact duplicates and *unambiguous* numeric footnote artifacts.
+
+    Never collapse different product/trains or infer a newer fixed release.
+    Example: 'Earlier than RI.2026.071' can be a footnote suffix only
+    when an otherwise identical row already exists without the final '1'.
+    """
+    values = {' '.join(str(x).split()) for x in entries if str(x).strip()}
+    normalized = set(values)
+    for value in values:
+        if ' -> ' not in value:
+            continue
+        context, fixed = value.split(' -> ', 1)
+        if not context.endswith('1'):
+            continue
+        candidate = context[:-1] + ' -> ' + fixed
+        if candidate in values and re.search(r'\bRI\.\d{4}\.\d{2}1$', context):
+            normalized.discard(value)
+    return sorted(normalized)
+
+
+def product_names_from_fixed_context(entries):
+    """Conservative fallback when the Cisco API/CSAF offers no family.
+
+    Only product-labelled fixed-table rows qualify; numeric release trains,
+    generic status labels and affected-version ranges do not.
+    """
+    names = set()
+    for entry in entries:
+        if ' -> ' not in entry:
+            continue
+        context, _ = entry.split(' -> ', 1)
+        context = ' '.join(context.split())
+        if (not re.search(r'[A-Za-z]{3}', context)
+                or re.match(r'^(?:earlier than|prior to|before|all versions|release\s+\d)', context, re.I)
+                or re.fullmatch(r'[\d.()a-zA-Z-]+', context)
+                or re.search(r'\b(?:not affected|under investigation|fixed|vulnerable)\b', context, re.I)):
+            continue
+        # Footnote markers immediately preceding a whitespace-separated
+        # product descriptor are removed, but embedded digits are retained.
+        context = re.sub(r'(?<=\D)(?:1,2|1, 2)(?=\s)', '', context)
+        names.add(context)
+    return sorted(names)
+
+
+def reconcile_record(record):
+    """Post-enrichment cleanup; retains the exact public JSON schema."""
+    record['FixedVersion'] = normalize_fixed_entries(record['FixedVersion'])
+    families = [p for p in record['AffectedProduct'] if p and p != 'NA']
+    if not families:
+        inferred = product_names_from_fixed_context(record['FixedVersion'])
+        if inferred:
+            record['AffectedProduct'] = inferred
+    return record
+
+
 def fetch_csaf(session, url):
     if not url or not url.startswith('https://sec.cloudapps.cisco.com/'):
         return None
@@ -430,6 +487,7 @@ def main():
                 record['AffectedProduct'] = families
             if unresolved:
                 print(f"WARNING: {record['AdvisoryKey']}: {len(unresolved)} CSAF product IDs unresolved")
+        reconcile_record(record)
         output.append(record)
         entry = ET.SubElement(channel, 'item')
         for tag, val in [
