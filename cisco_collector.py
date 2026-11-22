@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Collect Cisco PSIRT advisories and enrich affected/fixed releases from Cisco CSAF."""
+"""Cisco PSIRT Collector v3: conservative CSAF enrichment and fixed-release tables."""
 import json
+import html
 import os
 import re
 import time
 from datetime import datetime, timezone
 from email.utils import format_datetime
+from html.parser import HTMLParser
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -80,8 +82,101 @@ def extract_ise_fixed_notes(csaf):
 
 
 def versioned_name(name):
-    """True only for an explicit release identifier; family names stay out of versions."""
-    return bool(re.search(r'(?<![A-Za-z])\d+\.\d+(?:\.\d+)*(?:\s*(?:Patch|p)\s*\d+)?\b', name, re.I))
+    """Recognize dotted Cisco versions and CUCM SU, IOS XE and train formats.
+
+    This is a classification heuristic, not evidence of vulnerability status.
+    """
+    name = str(name or '')
+    patterns = (
+        r'(?<![A-Za-z0-9])\d+\.\d+(?:\.\d+)*(?:\([^)]{1,12}\))?(?:[-.]\d+)?',
+        r'(?<![A-Za-z0-9])\d{1,2}SU\d+[a-z]?(?![A-Za-z0-9])',
+        r'(?<![A-Za-z0-9])\d{1,2}(?![A-Za-z0-9])(?=\s*$)',
+    )
+    return any(re.search(p, name, re.I) for p in patterns)
+
+
+class _FixedTableParser(HTMLParser):
+    """Read HTML table cells without adding a third-party dependency."""
+    def __init__(self):
+        super().__init__()
+        self.tables = []
+        self.table = None
+        self.row = None
+        self.cell = None
+        self.depth = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'table':
+            if self.depth == 0:
+                self.table = []
+            self.depth += 1
+        elif self.depth and tag == 'tr':
+            self.row = []
+        elif self.depth and tag in ('td', 'th') and self.row is not None:
+            self.cell = []
+        elif self.cell is not None and tag == 'br':
+            self.cell.append(' ')
+
+    def handle_data(self, data):
+        if self.cell is not None:
+            self.cell.append(data)
+
+    def handle_endtag(self, tag):
+        if tag in ('td', 'th') and self.cell is not None and self.row is not None:
+            self.row.append(' '.join(''.join(self.cell).split()))
+            self.cell = None
+        elif tag == 'tr' and self.row is not None and self.table is not None:
+            if self.row:
+                self.table.append(self.row)
+            self.row = None
+        elif tag == 'table' and self.depth:
+            self.depth -= 1
+            if self.depth == 0 and self.table is not None:
+                self.tables.append(self.table)
+                self.table = None
+
+
+def _explicit_fixed_table_rows(note_text):
+    parser = _FixedTableParser()
+    parser.feed(note_text)
+    for table in parser.tables:
+        header_index = None
+        fixed_columns = []
+        product_columns = []
+        for i, row in enumerate(table[:5]):
+            lowered = [re.sub(r'\s+', ' ', c).lower() for c in row]
+            cols = [j for j, c in enumerate(lowered)
+                    if ('fixed' in c and ('release' in c or 'version' in c or 'software' in c))]
+            if cols:
+                header_index, fixed_columns = i, cols
+                product_columns = [j for j, c in enumerate(lowered)
+                                   if any(t in c for t in ('product', 'release', 'version', 'software'))
+                                   and j not in cols]
+                break
+        if header_index is None:
+            continue
+        for row in table[header_index + 1:]:
+            if len(row) <= max(fixed_columns):
+                continue
+            context = ' / '.join(row[j] for j in product_columns if j < len(row))
+            for j in fixed_columns:
+                yield context, row[j]
+
+
+def _clean_fixed_cell(cell):
+    """Accept explicit release cells, reject placeholders and prose."""
+    cell = html.unescape(re.sub(r'<[^>]+>', ' ', str(cell or '')))
+    cell = ' '.join(cell.split())
+    if not cell or len(cell) > 130 or re.search(
+        r'not affected|not vulnerable|no fix|not applicable|under investigation|to be determined|contact tac|see (?:the|below)|\bnone\b|\bn/?a\b',
+        cell, re.I):
+        return None
+    if not versioned_name(cell):
+        return None
+    # Never interpret an entire explanatory sentence as a release.
+    if len(cell.split()) > 12 or re.search(r'[.!?]\s+[A-Z]', cell):
+        return None
+    return cell
 
 
 def product_families(csaf):
@@ -102,18 +197,27 @@ def product_families(csaf):
 
 
 def extract_explicit_fixed_notes(csaf):
-    """Only extract unambiguous fixed releases from labeled Fixed Software notes.
+    """Extract releases only from explicitly headed Fixed Software table columns.
 
-    A bare upstream library fix is NOT necessarily a fixed Cisco product release.
+    Keep context in each value; ambiguous rows are deliberately skipped.
+    The special ISE parser is retained for its previously verified format.
     """
     results = set(extract_ise_fixed_notes(csaf))
     for note in (csaf.get('document') or {}).get('notes') or []:
         if str(note.get('title') or '').strip().lower() != 'fixed software':
             continue
-        content = str(note.get('text') or '')
-        # Conservative product/release rows, e.g. 'Cisco ASA 9.20(4) 9.20(4)10'
-        # are not parsed without an explicit table schema: avoid false fixes.
-        # The ISE parser above handles the verified table format.
+        for context, cell in _explicit_fixed_table_rows(str(note.get('text') or '')):
+            release = _clean_fixed_cell(cell)
+            if not release:
+                continue
+            # Only a release column plus an identifiable row context is accepted.
+            context = ' '.join(context.split())
+            if not context or len(context) > 100:
+                continue
+            if release.lower() in context.lower():
+                results.add(context)
+            else:
+                results.add(f'{context} -> {release}')
     return sorted(results)
 
 
@@ -137,8 +241,8 @@ def enrich_from_csaf(csaf):
                     unresolved.add(pid)
     # The vendor_fix remediation product_ids refer to affected products,
     # NOT to fixed releases. Never use them for FixedVersion.
-    if not fixed:
-        fixed.update(extract_explicit_fixed_notes(csaf))
+    # Explicit table releases complement CSAF fixed/first_fixed product statuses.
+    fixed.update(extract_explicit_fixed_notes(csaf))
     return sorted(x for x in affected if versioned_name(x)), sorted(fixed), sorted(unresolved)
 
 
@@ -228,6 +332,8 @@ def main():
             record['AffectedVersions'] = affected
             record['FixedVersion'] = fixed
             families = sorted({p for p in record['AffectedProduct'] if p != 'NA' and not versioned_name(p)})
+            # Some API product names are version leaves (e.g. CUCM 14SU1).
+            # Preserve them as affected only if CSAF explicitly marks them affected.
             if not families:
                 families = product_families(csaf)
             if families:
