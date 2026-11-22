@@ -1,0 +1,74 @@
+
+name: Cisco PSIRT API Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-cisco-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test Cisco OAuth and PSIRT API
+        env:
+          CISCO_CLIENT_ID: ${{ secrets.CISCO_CLIENT_ID }}
+          CISCO_CLIENT_SECRET: ${{ secrets.CISCO_CLIENT_SECRET }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import sys
+          import requests
+
+          client_id = os.environ.get("CISCO_CLIENT_ID", "")
+          client_secret = os.environ.get("CISCO_CLIENT_SECRET", "")
+
+          if not client_id or not client_secret:
+              sys.exit("ERROR: Cisco credentials are missing")
+
+          print("Step 1: Requesting Cisco OAuth token")
+
+          response = requests.post(
+              "https://id.cisco.com/oauth2/default/v1/token",
+              data={
+                  "grant_type": "client_credentials",
+                  "client_id": client_id,
+                  "client_secret": client_secret,
+              },
+              timeout=30,
+          )
+
+          print("OAuth HTTP status:", response.status_code)
+          response.raise_for_status()
+
+          token = response.json().get("access_token")
+          if not token:
+              sys.exit("ERROR: No access token returned")
+
+          print("SUCCESS: Cisco OAuth authentication")
+
+          print("Step 2: Testing Cisco PSIRT API")
+
+          response = requests.get(
+              "https://apix.cisco.com/security/advisories/v2/all",
+              headers={
+                  "Authorization": f"Bearer {token}",
+                  "Accept": "application/json",
+              },
+              params={
+                  "pageIndex": 1,
+                  "pageSize": 1,
+                  "productNames": "true",
+              },
+              timeout=30,
+          )
+
+          print("PSIRT API HTTP status:", response.status_code)
+          response.raise_for_status()
+
+          data = response.json()
+          print("SUCCESS: Cisco PSIRT API accessible")
+          print("Response fields:", list(data.keys()) if isinstance(data, dict) else "Array response")
+          PY
