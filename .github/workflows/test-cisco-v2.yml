@@ -1,0 +1,66 @@
+
+name: Test Cisco Collector V2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout selected branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install requests
+
+      - name: Check Python syntax
+        run: python -m py_compile cisco_collector.py
+
+      - name: Run Cisco Collector
+        env:
+          CISCO_CLIENT_ID: ${{ secrets.CISCO_CLIENT_ID }}
+          CISCO_CLIENT_SECRET: ${{ secrets.CISCO_CLIENT_SECRET }}
+        run: python cisco_collector.py
+
+      - name: Validate JSON and RSS
+        run: |
+          python -m json.tool cisco_advisories.json > /dev/null
+          python - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+
+          with open("cisco_advisories.json", encoding="utf-8") as f:
+              data = json.load(f)
+
+          ET.parse("cisco_enriched.xml")
+
+          assert len(data) > 0, "No Cisco advisories"
+          for item in data:
+              for key in ("AffectedProduct", "AffectedVersions", "FixedVersion"):
+                  assert isinstance(item.get(key), list), key
+
+          print("Advisories:", len(data))
+          print("AffectedVersions populated:",
+                sum(bool(x["AffectedVersions"]) for x in data))
+          print("FixedVersion populated:",
+                sum(bool(x["FixedVersion"]) for x in data))
+          PY
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: cisco-v2-test-results
+          path: |
+            cisco_advisories.json
+            cisco_enriched.xml
+          retention-days: 7
