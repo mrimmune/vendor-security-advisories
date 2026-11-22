@@ -1,4 +1,36 @@
-session = requests.Session()
+#!/usr/bin/env python3
+"""Collect Cisco PSIRT advisories and publish a Power Automate-friendly RSS feed."""
+import json
+import os
+from datetime import datetime, timezone
+from email.utils import format_datetime
+from pathlib import Path
+from xml.etree import ElementTree as ET
+
+import requests
+
+TOKEN_URL = 'https://id.cisco.com/oauth2/default/v1/token'
+API_URL = 'https://apix.cisco.com/security/advisories/v2/all'
+BASE = Path(__file__).resolve().parent
+
+
+def parse_date(value):
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace('Z', '+00:00')).replace(tzinfo=timezone.utc) if datetime.fromisoformat(value.replace('Z', '+00:00')).tzinfo is None else datetime.fromisoformat(value.replace('Z', '+00:00')).astimezone(timezone.utc)
+    except ValueError:
+        return None
+
+
+def rfc822(value):
+    return format_datetime(parse_date(value) or datetime.now(timezone.utc))
+
+
+def main():
+    client_id = os.environ['CISCO_CLIENT_ID']
+    client_secret = os.environ['CISCO_CLIENT_SECRET']
+    session = requests.Session()
     token_resp = session.post(TOKEN_URL, data={'grant_type': 'client_credentials', 'client_id': client_id, 'client_secret': client_secret}, timeout=30)
     token_resp.raise_for_status()
     token = token_resp.json()['access_token']
