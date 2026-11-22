@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cisco PSIRT Collector v6: CSAF and verified fixed-release HTML table enrichment."""
+"""Cisco PSIRT Collector v6.1: CSAF and verified fixed-release HTML table enrichment."""
 import json
 import html
 import os
@@ -334,6 +334,36 @@ def enrich_from_csaf(csaf):
 
 
 
+def clean_product_footnotes(value):
+    """Strip only observed Cisco HTML superscript artifacts, not release digits.
+
+    Applied to product names, never to version strings. Preserve numerals in
+    actual product names (e.g. Webex 2, Catalyst 9300).
+    """
+    value = ' '.join(str(value or '').split())
+    value = re.sub(r'(?i)(\bExpressway(?: Select)? Series)2$', r'\1', value)
+    value = re.sub(r'(?i)(\bUltra-Reliable Wireless Backhaul \(URWB\))1,\s*2(?=\s)', r'\1', value)
+    return value
+
+
+def fixed_availability_audit(record):
+    """Diagnostic only. Never claim a fix is available from a version string.
+
+    A Cisco Software Checker result requires product/platform/current release;
+    this advisory collector does not possess that inventory.
+    """
+    products = ' '.join(record.get('AffectedProduct') or [])
+    checker = bool(re.search(
+        r'\b(?:IOS(?: XE| XR)?|NX-OS|FXOS|ASA|FTD|FMC)\b|'
+        r'Firewall (?:Threat Defense|Management Center)|Adaptive Security Appliance',
+        products, re.I))
+    if checker and not record.get('FixedVersion'):
+        return 'SOFTWARE_CHECKER_REQUIRED_OR_FIX_NOT_EXTRACTED'
+    if not record.get('FixedVersion'):
+        return 'FIX_NOT_EXTRACTED_OR_NOT_PUBLISHED'
+    return 'FIX_LISTED_AVAILABILITY_NOT_INDEPENDENTLY_VERIFIED'
+
+
 def normalize_fixed_entries(entries):
     """Remove exact duplicates and *unambiguous* numeric footnote artifacts.
 
@@ -382,6 +412,17 @@ def product_names_from_fixed_context(entries):
 def reconcile_record(record):
     """Post-enrichment cleanup; retains the exact public JSON schema."""
     record['FixedVersion'] = normalize_fixed_entries(record['FixedVersion'])
+    # Normalize product labels on both sides of a mapping without altering
+    # release numbers or treating an estimated future release as available.
+    cleaned_fixed = []
+    for entry in record['FixedVersion']:
+        if ' -> ' in entry:
+            context, release = entry.split(' -> ', 1)
+            cleaned_fixed.append(clean_product_footnotes(context) + ' -> ' + release)
+        else:
+            cleaned_fixed.append(entry)
+    record['FixedVersion'] = normalize_fixed_entries(cleaned_fixed)
+    record['AffectedProduct'] = sorted(set(clean_product_footnotes(p) for p in record['AffectedProduct']))
     families = [p for p in record['AffectedProduct'] if p and p != 'NA']
     if not families:
         inferred = product_names_from_fixed_context(record['FixedVersion'])
@@ -433,6 +474,7 @@ def main():
     unique = {a['advisoryId']: a for a in advisories if isinstance(a, dict) and a.get('advisoryId')}
     items = sorted(unique.values(), key=lambda a: a.get('lastUpdated') or a.get('firstPublished') or '', reverse=True)
     output = []
+    audit = []
     rss = ET.Element('rss', version='2.0')
     channel = ET.SubElement(rss, 'channel')
     for tag, value in [
@@ -489,6 +531,9 @@ def main():
                 print(f"WARNING: {record['AdvisoryKey']}: {len(unresolved)} CSAF product IDs unresolved")
         reconcile_record(record)
         output.append(record)
+        audit.append({'AdvisoryKey': record['AdvisoryKey'],
+                      'FixedVersionAssessment': fixed_availability_audit(record),
+                      'CiscoAdvisoryURL': record['URL']})
         entry = ET.SubElement(channel, 'item')
         for tag, val in [
             ('title', record['Title']),
@@ -499,10 +544,12 @@ def main():
         ]:
             ET.SubElement(entry, tag).text = val
     (BASE / 'cisco_advisories.json').write_text(json.dumps(output, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+    (BASE / 'cisco_fixed_version_audit.json').write_text(
+        json.dumps(audit, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
     ET.indent(rss, space='  ')
     ET.ElementTree(rss).write(BASE / 'cisco_enriched.xml', encoding='utf-8', xml_declaration=True)
     print(f'Collected {len(output)} Cisco advisories; wrote JSON and RSS')
-    print('FixedVersion contains only releases without explicit future/TBD qualifiers; unknown availability is not independently verified.')
+    print('FixedVersion is not proof of release availability. See cisco_fixed_version_audit.json for review flags.')
     print('With fixed releases:', sum(bool(x['FixedVersion']) for x in output))
     print('With affected releases:', sum(bool(x['AffectedVersions']) for x in output))
     print('Severity counts:', {s: sum(x['Severity'] == s for x in output) for s in sorted(set(x['Severity'] for x in output))})
