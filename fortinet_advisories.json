@@ -4,7 +4,7 @@
     "Title": "Improper certificate validation in RADIUS protocol",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-247",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -204,7 +204,7 @@
     "Title": "Improper neutralization of special elements used in a template engine i",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-225",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiManager 8.0",
       "FortiManager 7.6",
@@ -278,7 +278,7 @@
     "Title": "Improper neutralization of special elements used in an OS command",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-246",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -424,7 +424,7 @@
     "Title": "Improper neutralization of special elements used in an SQL command",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-221",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 7.6",
       "FortiAnalyzer 7.4",
@@ -552,7 +552,7 @@
     "Title": "Linux kernel RCE CVE-2026-98432",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-188",
     "PublishedDate": "Mon, 02 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [],
     "AffectedVersions": [],
     "FixedVersion": [],
@@ -565,26 +565,10 @@
   },
   {
     "Vendor": "Fortinet",
-    "Title": "Java4Shell Vulnerability - CVE-2026-114938",
-    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-278",
-    "PublishedDate": "Wed, 18 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
-    "AffectedProduct": [],
-    "AffectedVersions": [],
-    "FixedVersion": [],
-    "CVE": [
-      "CVE-2026-114938",
-      "cve-2026-114938"
-    ],
-    "Severity": "HIGH",
-    "ExtractionStatus": "Version table not found"
-  },
-  {
-    "Vendor": "Fortinet",
     "Title": "NGINX vulnerabilities",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-279",
     "PublishedDate": "Fri, 20 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [],
     "AffectedVersions": [],
     "FixedVersion": [],
@@ -605,10 +589,26 @@
   },
   {
     "Vendor": "Fortinet",
+    "Title": "Java4Shell Vulnerability - CVE-2026-114938",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-278",
+    "PublishedDate": "Wed, 18 Nov 2026 00:00:00 -0800",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
+    "AffectedProduct": [],
+    "AffectedVersions": [],
+    "FixedVersion": [],
+    "CVE": [
+      "CVE-2026-114938",
+      "cve-2026-114938"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table not found"
+  },
+  {
+    "Vendor": "Fortinet",
     "Title": "Node2Shell CVEs",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-187",
     "PublishedDate": "Mon, 26 Oct 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [],
     "AffectedVersions": [],
     "FixedVersion": [],
@@ -632,7 +632,7 @@
     "Title": "Unauthenticated adjacent command execution via HA",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-273",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiOS 8.0",
       "FortiOS 7.6",
@@ -697,7 +697,7 @@
     "Title": "Numeric truncation error",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-268",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiOS 8.0",
       "FortiOS 7.6",
@@ -833,7 +833,7 @@
     "Title": "SSLVPN Improper Certificate Validation",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-193",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiOS 7.6",
       "FortiOS 7.4",
@@ -898,7 +898,7 @@
     "Title": "Allocation of resources without limits or throttling in fastapi",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-258",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiAuthenticator 8.0",
       "FortiAuthenticator 6.6"
@@ -936,7 +936,7 @@
     "Title": "Arbitrary file write and delete in JSON API",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-190",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 7.6",
       "FortiAnalyzer 7.4",
@@ -1037,7 +1037,7 @@
     "Title": "Authentication bypass",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-271",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiAuthenticator 8.0",
       "FortiAuthenticator 6.6"
@@ -1075,7 +1075,7 @@
     "Title": "Authentication bypass by primary weakness",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-267",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiOS 8.0",
       "FortiOS 7.6",
@@ -1220,7 +1220,7 @@
     "Title": "Authentication bypass by spoofing",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-229",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -1447,7 +1447,7 @@
     "Title": "Authorization bypass through user-controlled key",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-208",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiMail 8.0",
       "FortiMail 7.6",
@@ -1503,7 +1503,7 @@
     "Title": "Authorization bypass through user-controlled key",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-235",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiManager 8.0",
       "FortiManager 7.6",
@@ -1550,7 +1550,7 @@
     "Title": "Authorization bypass through user-controlled key",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-211",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiMail 8.0",
       "FortiMail 7.6",
@@ -1606,7 +1606,7 @@
     "Title": "Authorization bypass through user-controlled key",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-204",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0800",
-    "CollectedAt": "2026-11-24T15:39:24.470175+00:00",
+    "CollectedAt": "2026-11-25T15:24:25.948645+00:00",
     "AffectedProduct": [
       "FortiMail 8.0",
       "FortiMail 7.6",
