@@ -1,6 +1,95 @@
 [
   {
     "Vendor": "Cisco",
+    "AdvisoryKey": "cisco-sa-nginx-nov-2026-e8jska2s",
+    "Title": "Vulnerabilities in nginx Affecting Cisco Products: November 2026",
+    "URL": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nginx-nov-2026-e8jska2s",
+    "Severity": "HIGH",
+    "CVE": [
+      "CVE-2026-113425",
+      "CVE-2026-121810",
+      "CVE-2026-123007",
+      "CVE-2026-123633",
+      "CVE-2026-123634"
+    ],
+    "CVSS": 8.1,
+    "AffectedProduct": [
+      "Cisco Identity Services Engine Software",
+      "Cisco Intersight Virtual Appliance"
+    ],
+    "AffectedVersions": [],
+    "FixedVersion": [
+      "Vulnerability Management (formerly Kenna.VM) -> 1.30.7 (Nov 2026)",
+      "Webex Assistant for Meetings -> 1.15.16 (Nov 2026)"
+    ],
+    "OriginalPublishedDate": "2026-11-20T16:00:00",
+    "LastUpdated": "2026-11-24T22:15:16",
+    "Summary": "<p>On November 18, 2026, nginx announced the availability of a fix for multiple critical vulnerabilities in nginx that could lead to remote code execution. These vulnerabilities affect nginx releases 1.9.5 through 1.31.8 and is fixed in releases 1.31.9 (mainline) and 1.30.7 (stable).</p>\r\n<p>These vulnerabilities were identified by the following CVEs:</p>\r\n<ul>\r\n<li>CVE-2026-113425: NGINX ngx_mail_proxy_module vulnerability</li>\r\n<li>CVE-2026-121810: NGINX ngx_http_v3_module vulnerability</li>\r\n<li>CVE-2026-123007: NGINX ngx_http_v2_module vulnerability</li>\r\n<li>CVE-2026-123633: NGINX ngx_http_v2_module vulnerability</li>\r\n<li>CVE-2026-123634: NGINX resolver vulnerability</li>\r\n</ul>\r\n<p>For more information, see the <a href=\"https://nginx.org/en/security_advisories.html\">nginx Security Advisories</a>.</p>\r\n<p>This advisory will be updated as additional information becomes available.</p>\r\n<p>This advisory is available at the following link:<br><a href=\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nginx-nov-2026-e8jska2s\" target=\"_blank\" rel=\"noopener\">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nginx-nov-2026-e8jska2s</a></p>",
+    "CSAFURL": "https://sec.cloudapps.cisco.com/security/center/contentjson/CiscoSecurityAdvisory/cisco-sa-nginx-nov-2026-e8jska2s/csaf/cisco-sa-nginx-nov-2026-e8jska2s.json"
+  },
+  {
+    "Vendor": "Cisco",
+    "AdvisoryKey": "cisco-sa-oct2026-node-js-Jj3SQ19u",
+    "Title": "Vulnerabilities in Node.js and Brotli Affecting Cisco Products: October 2026",
+    "URL": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u",
+    "Severity": "HIGH",
+    "CVE": [
+      "CVE-2026-105482",
+      "CVE-2026-105483",
+      "CVE-2026-106069",
+      "CVE-2026-111497"
+    ],
+    "CVSS": 7.4,
+    "AffectedProduct": [
+      "Cisco AppDynamics",
+      "Cisco Catalyst Center",
+      "Cisco CloudCenter",
+      "Cisco Firepower Extensible Operating System (FXOS)",
+      "Cisco ISE Passive Identity Connector",
+      "Cisco Identity Services Engine Software",
+      "Cisco License On-Prem",
+      "Cisco NX-OS Software",
+      "Cisco Nexus Dashboard Fabric Controller (NDFC), formerly Data Center Network Manager (DCNM)",
+      "Cisco Secure Endpoint",
+      "Cisco Secure Endpoint Private Cloud Administration Portal",
+      "Cisco Secure Endpoint Private Cloud Console",
+      "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
+      "Cisco Secure Firewall Management Center (FMC)",
+      "Cisco Secure Firewall Threat Defense (FTD) Software",
+      "Cisco Secure Malware Analytics",
+      "Cisco Smart License Utility",
+      "Cisco Virtualized Infrastructure Manager"
+    ],
+    "AffectedVersions": [],
+    "FixedVersion": [],
+    "OriginalPublishedDate": "2026-10-27T21:30:00",
+    "LastUpdated": "2026-11-24T21:17:47",
+    "Summary": "\r\n<p>On October 21, 2026, Node.js announced the availability of fixes for multiple vulnerabilities across the following supported release lines: 22.x, 24.x, and 26.x.&nbsp;</p>\r\n<p>These vulnerabilities impact critical operations such as the Brotli decoder, DNS resolution, and TLS certificate validation. The vulnerabilities pose risks for remote code execution and traffic interception. For more information, see <a href=\"https://nodejs.org/en/blog/vulnerability/october-2026-security-releases\" target=\"_blank\" rel=\"noopener\">Node.js Security Release</a>.&nbsp;</p>\r\n<p>The following vulnerabilities have a Security Impact Rating (SIR) of High and are addressed in this advisory:&nbsp;</p>\r\n<ul>\r\n<li>CVE-2026-111497 - Brotli decoder out-of-bounds write; potential remote code execution</li>\r\n<li>CVE-2026-105482 - DNS resolution truncation involving embedded NUL characters</li>\r\n<li>CVE-2026-105483 - TLS hostname validation bypass using fullwidth IP digits</li>\r\n<li>CVE-2026-106069 - TLS hostname validation bypass with noncanonical IP addresses</li>\r\n</ul>\r\n<p>For information about Splunk products and offerings, including AppDynamics, see <a href=\"https://advisory.splunk.com/advisories/SVD-2026-1015\">Vulnerabilities in Node.js (CVE-2026-111497, CVE-2026-105482, CVE-2026-105483, CVE-2026-106069) on Splunk Products - October 2026</a></p>\r\n<p>This investigation was expanded to cover Brotli outside of Node.js on October 30, 2026. The Brotli decoder flaw (CVE-2026-111497), which is in the Google Brotli C decoder, is often bundled with or linked to other software, so products beyond Node.js may be affected. For software that may be affected, see&nbsp;<a title=\"https://broccoli2shell.com/\" href=\"https://broccoli2shell.com/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" data-outlook-id=\"33538e9f-dac8-44dc-a9e3-abc25ad3b5de\">Broccoli2Shell</a>.</p>\r\n<p><strong>Important: </strong>If a product is not listed within this advisory, Cisco's review indicates that the product is not affected by these vulnerabilities.</p>\r\n\r\n<p>This advisory is available at the following link:<br><a href=\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u\">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u</a></p>",
+    "CSAFURL": "https://sec.cloudapps.cisco.com/security/center/contentjson/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u/csaf/cisco-sa-oct2026-node-js-Jj3SQ19u.json"
+  },
+  {
+    "Vendor": "Cisco",
+    "AdvisoryKey": "cisco-sa-phpaftershell-nov-2026-kT9pL4Xe",
+    "Title": "Vulnerability in PHP Affecting Cisco Products: November 2026",
+    "URL": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-phpaftershell-nov-2026-kT9pL4Xe",
+    "Severity": "CRITICAL",
+    "CVE": [
+      "CVE-2026-126714"
+    ],
+    "CVSS": null,
+    "AffectedProduct": [
+      "Cisco TelePresence Video Communication Server (VCS) Expressway",
+      "Cisco Ultra-Reliable Wireless Backhaul"
+    ],
+    "AffectedVersions": [],
+    "FixedVersion": [],
+    "OriginalPublishedDate": "2026-11-23T20:20:00",
+    "LastUpdated": "2026-11-24T19:47:02",
+    "Summary": "<p>On November 19, 2026, the PHP Foundation announced the availability of security fixes that address a critical vulnerability that could lead to remote code execution. This vulnerability is identified by CVE-2026-126714.</p>\r\n<p>For information about this vulnerability, see the advisory&nbsp;<a href=\"https://github.com/php/php-src/security/advisories/GHSA-fm2m-fjf5-v3cp\" target=\"_blank\" rel=\"noopener\">GHSA-fm2m-fjf5-v3cp</a>.&nbsp;This vulnerability is being referenced as <a href=\"https://depthfirst.com/research/phpaftershell\">phpAfterShell</a>.</p>\r\n<p>For information about Splunk products and offerings, see&nbsp;<a href=\"https://advisory.splunk.com/advisories/SVD-2026-1113\" target=\"_blank\" rel=\"noopener\">Vulnerabilities in PHP affecting Splunk Products - November 2026</a>.<br><br>This advisory will be updated as additional information becomes available.&nbsp;</p>\r\n<p>This advisory is available at the following link:<br><a href=\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-phpaftershell-nov-2026-kT9pL4Xe\">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-phpaftershell-nov-2026-kT9pL4Xe</a></p>",
+    "CSAFURL": "https://sec.cloudapps.cisco.com/security/center/contentjson/CiscoSecurityAdvisory/cisco-sa-phpaftershell-nov-2026-kT9pL4Xe/csaf/cisco-sa-phpaftershell-nov-2026-kT9pL4Xe.json"
+  },
+  {
+    "Vendor": "Cisco",
     "AdvisoryKey": "cisco-sa-clamav-multi-e93M3vdA",
     "Title": "ClamAV Vulnerabilities Affecting Cisco Products: November 2026",
     "URL": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-clamav-multi-e93M3vdA",
@@ -213,55 +302,6 @@
   },
   {
     "Vendor": "Cisco",
-    "AdvisoryKey": "cisco-sa-phpaftershell-nov-2026-kT9pL4Xe",
-    "Title": "Vulnerability in PHP Affecting Cisco Products: November 2026",
-    "URL": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-phpaftershell-nov-2026-kT9pL4Xe",
-    "Severity": "CRITICAL",
-    "CVE": [
-      "CVE-2026-126714"
-    ],
-    "CVSS": null,
-    "AffectedProduct": [
-      "Cisco TelePresence Video Communication Server (VCS) Expressway",
-      "Cisco Ultra-Reliable Wireless Backhaul"
-    ],
-    "AffectedVersions": [],
-    "FixedVersion": [],
-    "OriginalPublishedDate": "2026-11-23T20:20:00",
-    "LastUpdated": "2026-11-23T20:20:00",
-    "Summary": "<p>On November 19, 2026, the PHP Foundation announced the availability of security fixes that address a critical vulnerability that could lead to remote code execution. This vulnerability is identified by CVE-2026-126714.</p>\r\n<p>For information about this vulnerability, see the advisory&nbsp;<a href=\"https://github.com/php/php-src/security/advisories/GHSA-fm2m-fjf5-v3cp\" target=\"_blank\" rel=\"noopener\">GHSA-fm2m-fjf5-v3cp</a>.&nbsp;This vulnerability is being referenced as <a href=\"https://depthfirst.com/research/phpaftershell\">phpAfterShell</a>.</p>\r\n<p>For information about Splunk products and offerings, see&nbsp;<a href=\"https://advisory.splunk.com/advisories/SVD-2026-1113\" target=\"_blank\" rel=\"noopener\">Vulnerabilities in PHP affecting Splunk Products - November 2026</a>.<br><br>This advisory will be updated as additional information becomes available.&nbsp;</p>\r\n<p>This advisory is available at the following link:<br><a href=\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-phpaftershell-nov-2026-kT9pL4Xe\">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-phpaftershell-nov-2026-kT9pL4Xe</a></p>",
-    "CSAFURL": "https://sec.cloudapps.cisco.com/security/center/contentjson/CiscoSecurityAdvisory/cisco-sa-phpaftershell-nov-2026-kT9pL4Xe/csaf/cisco-sa-phpaftershell-nov-2026-kT9pL4Xe.json"
-  },
-  {
-    "Vendor": "Cisco",
-    "AdvisoryKey": "cisco-sa-nginx-nov-2026-e8jska2s",
-    "Title": "Vulnerabilities in nginx Affecting Cisco Products: November 2026",
-    "URL": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nginx-nov-2026-e8jska2s",
-    "Severity": "HIGH",
-    "CVE": [
-      "CVE-2026-113425",
-      "CVE-2026-121810",
-      "CVE-2026-123007",
-      "CVE-2026-123633",
-      "CVE-2026-123634"
-    ],
-    "CVSS": 8.1,
-    "AffectedProduct": [
-      "Cisco Identity Services Engine Software",
-      "Cisco Intersight Virtual Appliance"
-    ],
-    "AffectedVersions": [],
-    "FixedVersion": [
-      "Vulnerability Management (formerly Kenna.VM) -> 1.30.7 (Nov 2026)",
-      "Webex Assistant for Meetings -> 1.15.16 (Nov 2026)"
-    ],
-    "OriginalPublishedDate": "2026-11-20T16:00:00",
-    "LastUpdated": "2026-11-23T20:14:39",
-    "Summary": "<p>On November 18, 2026, nginx announced the availability of a fix for multiple critical vulnerabilities in nginx that could lead to remote code execution. These vulnerabilities affect nginx releases 1.9.5 through 1.31.8 and is fixed in releases 1.31.9 (mainline) and 1.30.7 (stable).&nbsp;</p>\r\n<p>These vulnerabilities were identified by the following CVEs:</p>\r\n<ul>\r\n<li>CVE-2026-113425: NGINX ngx_mail_proxy_module vulnerability</li>\r\n<li>CVE-2026-121810: NGINX ngx_http_v3_module vulnerability</li>\r\n<li>CVE-2026-123007: NGINX ngx_http_v2_module vulnerability</li>\r\n<li>CVE-2026-123633: NGINX ngx_http_v2_module vulnerability</li>\r\n<li>CVE-2026-123634: NGINX resolver vulnerability</li>\r\n</ul>\r\n<p>For more information, see the <a href=\"https://nginx.org/en/security_advisories.html\">nginx Security Advisories</a>.</p>\r\n<p>This advisory will be updated as additional information becomes available.</p>\r\n<p>This advisory is available at the following link:<br><a href=\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nginx-nov-2026-e8jska2s\" target=\"_blank\" rel=\"noopener\">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nginx-nov-2026-e8jska2s</a></p>",
-    "CSAFURL": "https://sec.cloudapps.cisco.com/security/center/contentjson/CiscoSecurityAdvisory/cisco-sa-nginx-nov-2026-e8jska2s/csaf/cisco-sa-nginx-nov-2026-e8jska2s.json"
-  },
-  {
-    "Vendor": "Cisco",
     "AdvisoryKey": "cisco-sa-vcs-static-cred-hr7EWZ8t",
     "Title": "Cisco Expressway Series Remote Code Execution Vulnerability",
     "URL": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-vcs-static-cred-hr7EWZ8t",
@@ -393,46 +433,6 @@
     "LastUpdated": "2026-11-20T15:13:54",
     "Summary": "<p>Between October 17 and October 20, 2026, a critical security compromise involving Certificate Authorities that are managed by&nbsp;<strong>eMudhra</strong> was uncovered.</p>\r\n<p>A security researcher demonstrated that the private keys for eight eMudhra intermediate certificates were fundamentally broken due to an unprecedented error in their Key Generation Ceremony (KGC) in April 2025. This allows anyone to brute-force acquire these private keys within seconds. For more information, see&nbsp;<a href=\"https://emudhra.we-have-a-problem.com/\">eMudhra Intermediate CA Compromise</a> and the Cisco Talos blog post <a href=\"https://blog.talosintelligence.com/compromised-intermediate-certificates/\" target=\"_blank\" rel=\"noopener\">Compromised eMudhra intermediate certificates</a>.</p>\r\n<p>For information about Splunk products and offerings, see <a href=\"https://advisory.splunk.com/advisories/SVD-2026-1014\">Compromised eMudhra Intermediate Certificate Authorities on Splunk Products - October 2026</a>.</p>\r\n<p><strong>Important: </strong>If a product is not listed within this advisory, Cisco's review indicates that the product is not affected by this vulnerability.</p>\r\n<p>This advisory is available at the following link:<br><a href=\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-emudhra-info-ScS22A1r\">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-emudhra-info-ScS22A1r</a></p>",
     "CSAFURL": "https://sec.cloudapps.cisco.com/security/center/contentjson/CiscoSecurityAdvisory/cisco-sa-emudhra-info-ScS22A1r/csaf/cisco-sa-emudhra-info-ScS22A1r.json"
-  },
-  {
-    "Vendor": "Cisco",
-    "AdvisoryKey": "cisco-sa-oct2026-node-js-Jj3SQ19u",
-    "Title": "Vulnerabilities in Node.js and Brotli Affecting Cisco Products: October 2026",
-    "URL": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u",
-    "Severity": "HIGH",
-    "CVE": [
-      "CVE-2026-105482",
-      "CVE-2026-105483",
-      "CVE-2026-106069",
-      "CVE-2026-111497"
-    ],
-    "CVSS": 7.4,
-    "AffectedProduct": [
-      "Cisco AppDynamics",
-      "Cisco Catalyst Center",
-      "Cisco CloudCenter",
-      "Cisco Firepower Extensible Operating System (FXOS)",
-      "Cisco ISE Passive Identity Connector",
-      "Cisco Identity Services Engine Software",
-      "Cisco License On-Prem",
-      "Cisco NX-OS Software",
-      "Cisco Nexus Dashboard Fabric Controller (NDFC), formerly Data Center Network Manager (DCNM)",
-      "Cisco Secure Endpoint",
-      "Cisco Secure Endpoint Private Cloud Administration Portal",
-      "Cisco Secure Endpoint Private Cloud Console",
-      "Cisco Secure Firewall Adaptive Security Appliance (ASA) Software",
-      "Cisco Secure Firewall Management Center (FMC)",
-      "Cisco Secure Firewall Threat Defense (FTD) Software",
-      "Cisco Secure Malware Analytics",
-      "Cisco Smart License Utility",
-      "Cisco Virtualized Infrastructure Manager"
-    ],
-    "AffectedVersions": [],
-    "FixedVersion": [],
-    "OriginalPublishedDate": "2026-10-27T21:30:00",
-    "LastUpdated": "2026-11-17T23:53:12",
-    "Summary": "\r\n<p>On October 21, 2026, Node.js announced the availability of fixes for multiple vulnerabilities across the following supported release lines: 22.x, 24.x, and 26.x.&nbsp;</p>\r\n<p>These vulnerabilities impact critical operations such as the Brotli decoder, DNS resolution, and TLS certificate validation. The vulnerabilities pose risks for remote code execution and traffic interception. For more information, see <a href=\"https://nodejs.org/en/blog/vulnerability/october-2026-security-releases\" target=\"_blank\" rel=\"noopener\">Node.js Security Release</a>.&nbsp;</p>\r\n<p>The following vulnerabilities have a Security Impact Rating (SIR) of High and are addressed in this advisory:&nbsp;</p>\r\n<ul>\r\n<li>CVE-2026-111497 - Brotli decoder out-of-bounds write; potential remote code execution</li>\r\n<li>CVE-2026-105482 - DNS resolution truncation involving embedded NUL characters</li>\r\n<li>CVE-2026-105483 - TLS hostname validation bypass using fullwidth IP digits</li>\r\n<li>CVE-2026-106069 - TLS hostname validation bypass with noncanonical IP addresses</li>\r\n</ul>\r\n<p>For information about Splunk products and offerings, including AppDynamics, see <a href=\"https://advisory.splunk.com/advisories/SVD-2026-1015\">Vulnerabilities in Node.js (CVE-2026-111497, CVE-2026-105482, CVE-2026-105483, CVE-2026-106069) on Splunk Products - October 2026</a></p>\r\n<p>This investigation was expanded to cover Brotli outside of Node.js on October 30, 2026. The Brotli decoder flaw (CVE-2026-111497), which is in the Google Brotli C decoder, is often bundled with or linked to other software, so products beyond Node.js may be affected. For software that may be affected, see&nbsp;<a title=\"https://broccoli2shell.com/\" href=\"https://broccoli2shell.com/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" data-outlook-id=\"33538e9f-dac8-44dc-a9e3-abc25ad3b5de\">Broccoli2Shell</a>.</p>\r\n<p><strong>Important: </strong>If a product is not listed within this advisory, Cisco's review indicates that the product is not affected by this vulnerability.</p>\r\n<p>This advisory will be updated as additional information becomes available.</p>\r\n\r\n<p>This advisory is available at the following link:<br><a href=\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u\">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u</a></p>",
-    "CSAFURL": "https://sec.cloudapps.cisco.com/security/center/contentjson/CiscoSecurityAdvisory/cisco-sa-oct2026-node-js-Jj3SQ19u/csaf/cisco-sa-oct2026-node-js-Jj3SQ19u.json"
   },
   {
     "Vendor": "Cisco",
