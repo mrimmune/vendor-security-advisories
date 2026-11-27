@@ -5,7 +5,7 @@
     <link>https://fortiguard.fortinet.com/psirt</link>
     <description>Fortinet PSIRT advisories enriched with affected and fixed versions</description>
     <language>en</language>
-    <lastBuildDate>Thu, 26 Nov 2026 14:53:33 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 14:51:21 +0000</lastBuildDate>
     <item>
       <title>Improper certificate validation in RADIUS protocol</title>
       <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-247</link>
@@ -38,8 +38,8 @@
       <title>Unauthenticated adjacent command execution via HA</title>
       <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-273</link>
       <guid isPermaLink="true">https://fortiguard.fortinet.com/psirt/FG-IR-26-273</guid>
-      <pubDate>Tue, 10 Nov 2026 07:00:00 +0000</pubDate>
-      <description>{"Severity":"CRITICAL","CVE":["CVE-2026-126259"],"AffectedProduct":["FortiOS 8.0","FortiOS 7.6","FortiOS 7.4","FortiOS 7.2","FortiOS 7.0"],"AffectedVersions":[{"Product":"FortiOS 8.0","Versions":"8.0.0"},{"Product":"FortiOS 7.6","Versions":"7.6.0 through 7.6.7"},{"Product":"FortiOS 7.4","Versions":"7.4.0 through 7.4.12"},{"Product":"FortiOS 7.2","Versions":"7.2.0 through 7.2.13"},{"Product":"FortiOS 7.0","Versions":"7.0 all versions"}],"FixedVersion":[{"Product":"FortiOS 8.0","Solution":"Upgrade to 8.0.1 or above"},{"Product":"FortiOS 7.6","Solution":"Upgrade to 7.6.8 or above"},{"Product":"FortiOS 7.4","Solution":"Upgrade to 7.4.13 or above"},{"Product":"FortiOS 7.2","Solution":"Upgrade to 7.2.14 or above"},{"Product":"FortiOS 7.0","Solution":"Migrate to a fixed release"}],"AffectedVersionsText":"FortiOS 8.0: 8.0.0\nFortiOS 7.6: 7.6.0 through 7.6.7\nFortiOS 7.4: 7.4.0 through 7.4.12\nFortiOS 7.2: 7.2.0 through 7.2.13\nFortiOS 7.0: 7.0 all versions","FixedVersionText":"FortiOS 8.0: Upgrade to 8.0.1 or above\nFortiOS 7.6: Upgrade to 7.6.8 or above\nFortiOS 7.4: Upgrade to 7.4.13 or above\nFortiOS 7.2: Upgrade to 7.2.14 or above\nFortiOS 7.0: Migrate to a fixed release","ExtractionStatus":"Version table extracted","OriginalPublishedDate":"Tue, 10 Nov 2026 00:00:00 -0700"}</description>
+      <pubDate>Fri, 27 Nov 2026 14:51:17 +0000</pubDate>
+      <description>{"Severity":"CRITICAL","CVE":["CVE-2026-126259"],"AffectedProduct":["FortiOS 8.0","FortiOS 7.6","FortiOS 7.4","FortiOS 7.2"],"AffectedVersions":[{"Product":"FortiOS 8.0","Versions":"8.0.0"},{"Product":"FortiOS 7.6","Versions":"7.6.0 through 7.6.7"},{"Product":"FortiOS 7.4","Versions":"7.4.0 through 7.4.12"},{"Product":"FortiOS 7.2","Versions":"7.2.0 through 7.2.13"}],"FixedVersion":[{"Product":"FortiOS 8.0","Solution":"Upgrade to 8.0.1 or above"},{"Product":"FortiOS 7.6","Solution":"Upgrade to 7.6.8 or above"},{"Product":"FortiOS 7.4","Solution":"Upgrade to 7.4.13 or above"},{"Product":"FortiOS 7.2","Solution":"Upgrade to 7.2.14 or above"}],"AffectedVersionsText":"FortiOS 8.0: 8.0.0\nFortiOS 7.6: 7.6.0 through 7.6.7\nFortiOS 7.4: 7.4.0 through 7.4.12\nFortiOS 7.2: 7.2.0 through 7.2.13","FixedVersionText":"FortiOS 8.0: Upgrade to 8.0.1 or above\nFortiOS 7.6: Upgrade to 7.6.8 or above\nFortiOS 7.4: Upgrade to 7.4.13 or above\nFortiOS 7.2: Upgrade to 7.2.14 or above","ExtractionStatus":"Version table extracted","OriginalPublishedDate":"Tue, 10 Nov 2026 00:00:00 -0700"}</description>
     </item>
     <item>
       <title>Numeric truncation error</title>
@@ -52,8 +52,8 @@
       <title>SSLVPN Improper Certificate Validation</title>
       <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-193</link>
       <guid isPermaLink="true">https://fortiguard.fortinet.com/psirt/FG-IR-26-193</guid>
-      <pubDate>Tue, 10 Nov 2026 07:00:00 +0000</pubDate>
-      <description>{"Severity":"HIGH","CVE":["CVE-2026-121528"],"AffectedProduct":["FortiOS 7.6","FortiOS 7.4","FortiOS 7.2","FortiOS 7.0","FortiOS 6.4"],"AffectedVersions":[{"Product":"FortiOS 7.6","Versions":"7.6.0 through 7.6.4"},{"Product":"FortiOS 7.4","Versions":"7.4.0 through 7.4.9"},{"Product":"FortiOS 7.2","Versions":"7.2.0 through 7.2.13"},{"Product":"FortiOS 7.0","Versions":"7.0 all versions"},{"Product":"FortiOS 6.4","Versions":"6.4 all versions"}],"FixedVersion":[{"Product":"FortiOS 7.6","Solution":"Upgrade to 7.6.5 or above"},{"Product":"FortiOS 7.4","Solution":"Upgrade to 7.4.10 or above"},{"Product":"FortiOS 7.2","Solution":"Upgrade to 7.2.14 or above"},{"Product":"FortiOS 7.0","Solution":"Migrate to a fixed release"},{"Product":"FortiOS 6.4","Solution":"Migrate to a fixed release"}],"AffectedVersionsText":"FortiOS 7.6: 7.6.0 through 7.6.4\nFortiOS 7.4: 7.4.0 through 7.4.9\nFortiOS 7.2: 7.2.0 through 7.2.13\nFortiOS 7.0: 7.0 all versions\nFortiOS 6.4: 6.4 all versions","FixedVersionText":"FortiOS 7.6: Upgrade to 7.6.5 or above\nFortiOS 7.4: Upgrade to 7.4.10 or above\nFortiOS 7.2: Upgrade to 7.2.14 or above\nFortiOS 7.0: Migrate to a fixed release\nFortiOS 6.4: Migrate to a fixed release","ExtractionStatus":"Version table extracted","OriginalPublishedDate":"Tue, 10 Nov 2026 00:00:00 -0700"}</description>
+      <pubDate>Fri, 27 Nov 2026 14:51:17 +0000</pubDate>
+      <description>{"Severity":"HIGH","CVE":["CVE-2026-121528"],"AffectedProduct":["FortiOS 7.6","FortiOS 7.4","FortiOS 7.2"],"AffectedVersions":[{"Product":"FortiOS 7.6","Versions":"7.6.0 through 7.6.4"},{"Product":"FortiOS 7.4","Versions":"7.4.0 through 7.4.9"},{"Product":"FortiOS 7.2","Versions":"7.2.0 through 7.2.13"}],"FixedVersion":[{"Product":"FortiOS 7.6","Solution":"Upgrade to 7.6.5 or above"},{"Product":"FortiOS 7.4","Solution":"Upgrade to 7.4.10 or above"},{"Product":"FortiOS 7.2","Solution":"Upgrade to 7.2.14 or above"}],"AffectedVersionsText":"FortiOS 7.6: 7.6.0 through 7.6.4\nFortiOS 7.4: 7.4.0 through 7.4.9\nFortiOS 7.2: 7.2.0 through 7.2.13","FixedVersionText":"FortiOS 7.6: Upgrade to 7.6.5 or above\nFortiOS 7.4: Upgrade to 7.4.10 or above\nFortiOS 7.2: Upgrade to 7.2.14 or above","ExtractionStatus":"Version table extracted","OriginalPublishedDate":"Tue, 10 Nov 2026 00:00:00 -0700"}</description>
     </item>
     <item>
       <title>Allocation of resources without limits or throttling in fastapi</title>
@@ -92,13 +92,6 @@
     </item>
     <item>
       <title>Authorization bypass through user-controlled key</title>
-      <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-208</link>
-      <guid isPermaLink="true">https://fortiguard.fortinet.com/psirt/FG-IR-26-208</guid>
-      <pubDate>Tue, 10 Nov 2026 07:00:00 +0000</pubDate>
-      <description>{"Severity":"CRITICAL","CVE":["CVE-2026-126156"],"AffectedProduct":["FortiMail 8.0","FortiMail 7.6","FortiMail 7.4","FortiMail 7.2"],"AffectedVersions":[{"Product":"FortiMail 8.0","Versions":"8.0.0 through 8.0.1"},{"Product":"FortiMail 7.6","Versions":"7.6.0 through 7.6.6"},{"Product":"FortiMail 7.4","Versions":"7.4.0 through 7.4.8"},{"Product":"FortiMail 7.2","Versions":"7.2 all versions"}],"FixedVersion":[{"Product":"FortiMail 8.0","Solution":"Upgrade to 8.0.2 or above"},{"Product":"FortiMail 7.6","Solution":"Upgrade to 7.6.7 or above"},{"Product":"FortiMail 7.4","Solution":"Upgrade to 7.4.9 or above"},{"Product":"FortiMail 7.2","Solution":"Migrate to a fixed release"}],"AffectedVersionsText":"FortiMail 8.0: 8.0.0 through 8.0.1\nFortiMail 7.6: 7.6.0 through 7.6.6\nFortiMail 7.4: 7.4.0 through 7.4.8\nFortiMail 7.2: 7.2 all versions","FixedVersionText":"FortiMail 8.0: Upgrade to 8.0.2 or above\nFortiMail 7.6: Upgrade to 7.6.7 or above\nFortiMail 7.4: Upgrade to 7.4.9 or above\nFortiMail 7.2: Migrate to a fixed release","ExtractionStatus":"Version table extracted","OriginalPublishedDate":"Tue, 10 Nov 2026 00:00:00 -0700"}</description>
-    </item>
-    <item>
-      <title>Authorization bypass through user-controlled key</title>
       <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-235</link>
       <guid isPermaLink="true">https://fortiguard.fortinet.com/psirt/FG-IR-26-235</guid>
       <pubDate>Tue, 10 Nov 2026 07:00:00 +0000</pubDate>
@@ -106,17 +99,24 @@
     </item>
     <item>
       <title>Authorization bypass through user-controlled key</title>
-      <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-211</link>
-      <guid isPermaLink="true">https://fortiguard.fortinet.com/psirt/FG-IR-26-211</guid>
-      <pubDate>Tue, 10 Nov 2026 07:00:00 +0000</pubDate>
-      <description>{"Severity":"HIGH","CVE":["CVE-2026-126159"],"AffectedProduct":["FortiMail 8.0","FortiMail 7.6","FortiMail 7.4","FortiMail 7.2"],"AffectedVersions":[{"Product":"FortiMail 8.0","Versions":"8.0.0 through 8.0.1"},{"Product":"FortiMail 7.6","Versions":"7.6.0 through 7.6.6"},{"Product":"FortiMail 7.4","Versions":"7.4.0 through 7.4.8"},{"Product":"FortiMail 7.2","Versions":"7.2 all versions"}],"FixedVersion":[{"Product":"FortiMail 8.0","Solution":"Upgrade to 8.0.2 or above"},{"Product":"FortiMail 7.6","Solution":"Upgrade to 7.6.7 or above"},{"Product":"FortiMail 7.4","Solution":"Upgrade to 7.4.9 or above"},{"Product":"FortiMail 7.2","Solution":"Migrate to a fixed release"}],"AffectedVersionsText":"FortiMail 8.0: 8.0.0 through 8.0.1\nFortiMail 7.6: 7.6.0 through 7.6.6\nFortiMail 7.4: 7.4.0 through 7.4.8\nFortiMail 7.2: 7.2 all versions","FixedVersionText":"FortiMail 8.0: Upgrade to 8.0.2 or above\nFortiMail 7.6: Upgrade to 7.6.7 or above\nFortiMail 7.4: Upgrade to 7.4.9 or above\nFortiMail 7.2: Migrate to a fixed release","ExtractionStatus":"Version table extracted","OriginalPublishedDate":"Tue, 10 Nov 2026 00:00:00 -0700"}</description>
+      <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-208</link>
+      <guid isPermaLink="true">https://fortiguard.fortinet.com/psirt/FG-IR-26-208</guid>
+      <pubDate>Fri, 27 Nov 2026 14:51:17 +0000</pubDate>
+      <description>{"Severity":"CRITICAL","CVE":["CVE-2026-126156"],"AffectedProduct":["FortiMail 8.0","FortiMail 7.6","FortiMail 7.4"],"AffectedVersions":[{"Product":"FortiMail 8.0","Versions":"8.0.0 through 8.0.1"},{"Product":"FortiMail 7.6","Versions":"7.6.0 through 7.6.6"},{"Product":"FortiMail 7.4","Versions":"7.4.0 through 7.4.8"}],"FixedVersion":[{"Product":"FortiMail 8.0","Solution":"Upgrade to 8.0.2 or above"},{"Product":"FortiMail 7.6","Solution":"Upgrade to 7.6.7 or above"},{"Product":"FortiMail 7.4","Solution":"Upgrade to 7.4.9 or above"}],"AffectedVersionsText":"FortiMail 8.0: 8.0.0 through 8.0.1\nFortiMail 7.6: 7.6.0 through 7.6.6\nFortiMail 7.4: 7.4.0 through 7.4.8","FixedVersionText":"FortiMail 8.0: Upgrade to 8.0.2 or above\nFortiMail 7.6: Upgrade to 7.6.7 or above\nFortiMail 7.4: Upgrade to 7.4.9 or above","ExtractionStatus":"Version table extracted","OriginalPublishedDate":"Tue, 10 Nov 2026 00:00:00 -0700"}</description>
     </item>
     <item>
       <title>Authorization bypass through user-controlled key</title>
       <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-204</link>
       <guid isPermaLink="true">https://fortiguard.fortinet.com/psirt/FG-IR-26-204</guid>
-      <pubDate>Tue, 17 Nov 2026 14:14:00 +0000</pubDate>
-      <description>{"Severity":"HIGH","CVE":["CVE-2026-126152"],"AffectedProduct":["FortiMail 8.0","FortiMail 7.6","FortiMail 7.4","FortiMail 7.2"],"AffectedVersions":[{"Product":"FortiMail 8.0","Versions":"8.0.0 through 8.0.1"},{"Product":"FortiMail 7.6","Versions":"7.6.0 through 7.6.6"},{"Product":"FortiMail 7.4","Versions":"7.4.0 through 7.4.8"},{"Product":"FortiMail 7.2","Versions":"7.2 all versions"}],"FixedVersion":[{"Product":"FortiMail 8.0","Solution":"Upgrade to 8.0.2 or above"},{"Product":"FortiMail 7.6","Solution":"Upgrade to 7.6.7 or above"},{"Product":"FortiMail 7.4","Solution":"Upgrade to 7.4.9 or above"},{"Product":"FortiMail 7.2","Solution":"Migrate to a fixed release"}],"AffectedVersionsText":"FortiMail 8.0: 8.0.0 through 8.0.1\nFortiMail 7.6: 7.6.0 through 7.6.6\nFortiMail 7.4: 7.4.0 through 7.4.8\nFortiMail 7.2: 7.2 all versions","FixedVersionText":"FortiMail 8.0: Upgrade to 8.0.2 or above\nFortiMail 7.6: Upgrade to 7.6.7 or above\nFortiMail 7.4: Upgrade to 7.4.9 or above\nFortiMail 7.2: Migrate to a fixed release","ExtractionStatus":"Version table extracted","OriginalPublishedDate":"Tue, 10 Nov 2026 00:00:00 -0700"}</description>
+      <pubDate>Fri, 27 Nov 2026 14:51:17 +0000</pubDate>
+      <description>{"Severity":"HIGH","CVE":["CVE-2026-126152"],"AffectedProduct":["FortiMail 8.0","FortiMail 7.6","FortiMail 7.4"],"AffectedVersions":[{"Product":"FortiMail 8.0","Versions":"8.0.0 through 8.0.1"},{"Product":"FortiMail 7.6","Versions":"7.6.0 through 7.6.6"},{"Product":"FortiMail 7.4","Versions":"7.4.0 through 7.4.8"}],"FixedVersion":[{"Product":"FortiMail 8.0","Solution":"Upgrade to 8.0.2 or above"},{"Product":"FortiMail 7.6","Solution":"Upgrade to 7.6.7 or above"},{"Product":"FortiMail 7.4","Solution":"Upgrade to 7.4.9 or above"}],"AffectedVersionsText":"FortiMail 8.0: 8.0.0 through 8.0.1\nFortiMail 7.6: 7.6.0 through 7.6.6\nFortiMail 7.4: 7.4.0 through 7.4.8","FixedVersionText":"FortiMail 8.0: Upgrade to 8.0.2 or above\nFortiMail 7.6: Upgrade to 7.6.7 or above\nFortiMail 7.4: Upgrade to 7.4.9 or above","ExtractionStatus":"Version table extracted","OriginalPublishedDate":"Tue, 10 Nov 2026 00:00:00 -0700"}</description>
+    </item>
+    <item>
+      <title>Authorization bypass through user-controlled key</title>
+      <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-211</link>
+      <guid isPermaLink="true">https://fortiguard.fortinet.com/psirt/FG-IR-26-211</guid>
+      <pubDate>Fri, 27 Nov 2026 14:51:17 +0000</pubDate>
+      <description>{"Severity":"HIGH","CVE":["CVE-2026-126159"],"AffectedProduct":["FortiMail 8.0","FortiMail 7.6","FortiMail 7.4"],"AffectedVersions":[{"Product":"FortiMail 8.0","Versions":"8.0.0 through 8.0.1"},{"Product":"FortiMail 7.6","Versions":"7.6.0 through 7.6.6"},{"Product":"FortiMail 7.4","Versions":"7.4.0 through 7.4.8"}],"FixedVersion":[{"Product":"FortiMail 8.0","Solution":"Upgrade to 8.0.2 or above"},{"Product":"FortiMail 7.6","Solution":"Upgrade to 7.6.7 or above"},{"Product":"FortiMail 7.4","Solution":"Upgrade to 7.4.9 or above"}],"AffectedVersionsText":"FortiMail 8.0: 8.0.0 through 8.0.1\nFortiMail 7.6: 7.6.0 through 7.6.6\nFortiMail 7.4: 7.4.0 through 7.4.8","FixedVersionText":"FortiMail 8.0: Upgrade to 8.0.2 or above\nFortiMail 7.6: Upgrade to 7.6.7 or above\nFortiMail 7.4: Upgrade to 7.4.9 or above","ExtractionStatus":"Version table extracted","OriginalPublishedDate":"Tue, 10 Nov 2026 00:00:00 -0700"}</description>
     </item>
   </channel>
 </rss>

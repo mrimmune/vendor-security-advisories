@@ -4,7 +4,7 @@
     "Title": "NGINX vulnerabilities",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-279",
     "PublishedDate": "Fri, 20 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [],
     "AffectedVersions": [],
     "FixedVersion": [],
@@ -28,7 +28,7 @@
     "Title": "Improper certificate validation in RADIUS protocol",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-247",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -228,7 +228,7 @@
     "Title": "Improper neutralization of special elements used in a template engine i",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-225",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiManager 8.0",
       "FortiManager 7.6",
@@ -302,7 +302,7 @@
     "Title": "Improper neutralization of special elements used in an OS command",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-246",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -448,7 +448,7 @@
     "Title": "Improper neutralization of special elements used in an SQL command",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-221",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 7.6",
       "FortiAnalyzer 7.4",
@@ -576,7 +576,7 @@
     "Title": "Linux kernel RCE CVE-2026-98432",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-188",
     "PublishedDate": "Mon, 02 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [],
     "AffectedVersions": [],
     "FixedVersion": [],
@@ -592,7 +592,7 @@
     "Title": "Java4Shell Vulnerability - CVE-2026-114938",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-278",
     "PublishedDate": "Wed, 18 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [],
     "AffectedVersions": [],
     "FixedVersion": [],
@@ -608,7 +608,7 @@
     "Title": "Node2Shell CVEs",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-187",
     "PublishedDate": "Mon, 26 Oct 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [],
     "AffectedVersions": [],
     "FixedVersion": [],
@@ -632,13 +632,12 @@
     "Title": "Unauthenticated adjacent command execution via HA",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-273",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiOS 8.0",
       "FortiOS 7.6",
       "FortiOS 7.4",
-      "FortiOS 7.2",
-      "FortiOS 7.0"
+      "FortiOS 7.2"
     ],
     "AffectedVersions": [
       {
@@ -656,10 +655,6 @@
       {
         "Product": "FortiOS 7.2",
         "Versions": "7.2.0 through 7.2.13"
-      },
-      {
-        "Product": "FortiOS 7.0",
-        "Versions": "7.0 all versions"
       }
     ],
     "FixedVersion": [
@@ -678,10 +673,6 @@
       {
         "Product": "FortiOS 7.2",
         "Solution": "Upgrade to 7.2.14 or above"
-      },
-      {
-        "Product": "FortiOS 7.0",
-        "Solution": "Migrate to a fixed release"
       }
     ],
     "CVE": [
@@ -689,15 +680,15 @@
     ],
     "Severity": "CRITICAL",
     "ExtractionStatus": "Version table extracted",
-    "ContentUpdatedAt": "",
-    "ContentHash": "69eea6d65bbc3887f03816f5c2b198e73eba8077d3bbae43ad37ba5617dbbe8a"
+    "ContentUpdatedAt": "2026-11-27T14:51:17.942804+00:00",
+    "ContentHash": "9727dbf9bb76989b8c7126ebe69758488c87013962752a4cb897c4bec5926330"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Numeric truncation error",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-268",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiOS 8.0",
       "FortiOS 7.6",
@@ -833,13 +824,11 @@
     "Title": "SSLVPN Improper Certificate Validation",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-193",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiOS 7.6",
       "FortiOS 7.4",
-      "FortiOS 7.2",
-      "FortiOS 7.0",
-      "FortiOS 6.4"
+      "FortiOS 7.2"
     ],
     "AffectedVersions": [
       {
@@ -853,14 +842,6 @@
       {
         "Product": "FortiOS 7.2",
         "Versions": "7.2.0 through 7.2.13"
-      },
-      {
-        "Product": "FortiOS 7.0",
-        "Versions": "7.0 all versions"
-      },
-      {
-        "Product": "FortiOS 6.4",
-        "Versions": "6.4 all versions"
       }
     ],
     "FixedVersion": [
@@ -875,14 +856,6 @@
       {
         "Product": "FortiOS 7.2",
         "Solution": "Upgrade to 7.2.14 or above"
-      },
-      {
-        "Product": "FortiOS 7.0",
-        "Solution": "Migrate to a fixed release"
-      },
-      {
-        "Product": "FortiOS 6.4",
-        "Solution": "Migrate to a fixed release"
       }
     ],
     "CVE": [
@@ -890,15 +863,15 @@
     ],
     "Severity": "HIGH",
     "ExtractionStatus": "Version table extracted",
-    "ContentUpdatedAt": "",
-    "ContentHash": "305b86454fc575972acb4de1eeec5d398a3f78da271b6e0762132f0baefc4ebe"
+    "ContentUpdatedAt": "2026-11-27T14:51:17.942804+00:00",
+    "ContentHash": "0d21de3425e2b82e9150e98d5fd3fa8ee209ca74395ecb3465588e69f5483929"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Allocation of resources without limits or throttling in fastapi",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-258",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiAuthenticator 8.0",
       "FortiAuthenticator 6.6"
@@ -936,7 +909,7 @@
     "Title": "Arbitrary file write and delete in JSON API",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-190",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 7.6",
       "FortiAnalyzer 7.4",
@@ -1037,7 +1010,7 @@
     "Title": "Authentication bypass",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-271",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiAuthenticator 8.0",
       "FortiAuthenticator 6.6"
@@ -1075,7 +1048,7 @@
     "Title": "Authentication bypass by primary weakness",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-267",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiOS 8.0",
       "FortiOS 7.6",
@@ -1220,7 +1193,7 @@
     "Title": "Authentication bypass by spoofing",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-229",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiAnalyzer 8.0",
       "FortiAnalyzer 7.6",
@@ -1445,65 +1418,9 @@
   {
     "Vendor": "Fortinet",
     "Title": "Authorization bypass through user-controlled key",
-    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-208",
-    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
-    "AffectedProduct": [
-      "FortiMail 8.0",
-      "FortiMail 7.6",
-      "FortiMail 7.4",
-      "FortiMail 7.2"
-    ],
-    "AffectedVersions": [
-      {
-        "Product": "FortiMail 8.0",
-        "Versions": "8.0.0 through 8.0.1"
-      },
-      {
-        "Product": "FortiMail 7.6",
-        "Versions": "7.6.0 through 7.6.6"
-      },
-      {
-        "Product": "FortiMail 7.4",
-        "Versions": "7.4.0 through 7.4.8"
-      },
-      {
-        "Product": "FortiMail 7.2",
-        "Versions": "7.2 all versions"
-      }
-    ],
-    "FixedVersion": [
-      {
-        "Product": "FortiMail 8.0",
-        "Solution": "Upgrade to 8.0.2 or above"
-      },
-      {
-        "Product": "FortiMail 7.6",
-        "Solution": "Upgrade to 7.6.7 or above"
-      },
-      {
-        "Product": "FortiMail 7.4",
-        "Solution": "Upgrade to 7.4.9 or above"
-      },
-      {
-        "Product": "FortiMail 7.2",
-        "Solution": "Migrate to a fixed release"
-      }
-    ],
-    "CVE": [
-      "CVE-2026-126156"
-    ],
-    "Severity": "CRITICAL",
-    "ExtractionStatus": "Version table extracted",
-    "ContentUpdatedAt": "",
-    "ContentHash": "d0b1c7a7cfc6dbb69e18b470aa8d413883f1aab260c56380a2d485ae0c02b1cf"
-  },
-  {
-    "Vendor": "Fortinet",
-    "Title": "Authorization bypass through user-controlled key",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-235",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiManager 8.0",
       "FortiManager 7.6",
@@ -1548,14 +1465,13 @@
   {
     "Vendor": "Fortinet",
     "Title": "Authorization bypass through user-controlled key",
-    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-211",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-208",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiMail 8.0",
       "FortiMail 7.6",
-      "FortiMail 7.4",
-      "FortiMail 7.2"
+      "FortiMail 7.4"
     ],
     "AffectedVersions": [
       {
@@ -1569,10 +1485,6 @@
       {
         "Product": "FortiMail 7.4",
         "Versions": "7.4.0 through 7.4.8"
-      },
-      {
-        "Product": "FortiMail 7.2",
-        "Versions": "7.2 all versions"
       }
     ],
     "FixedVersion": [
@@ -1587,31 +1499,26 @@
       {
         "Product": "FortiMail 7.4",
         "Solution": "Upgrade to 7.4.9 or above"
-      },
-      {
-        "Product": "FortiMail 7.2",
-        "Solution": "Migrate to a fixed release"
       }
     ],
     "CVE": [
-      "CVE-2026-126159"
+      "CVE-2026-126156"
     ],
-    "Severity": "HIGH",
+    "Severity": "CRITICAL",
     "ExtractionStatus": "Version table extracted",
-    "ContentUpdatedAt": "",
-    "ContentHash": "dd5699f876615f8d2fc1f4914a466370e474d2489130f5b0d61ce4e2d5086c10"
+    "ContentUpdatedAt": "2026-11-27T14:51:17.942804+00:00",
+    "ContentHash": "36e96e36d1a28e2d4a86087cebb1e88d664d9cd535fd4e01917e994c0915dff0"
   },
   {
     "Vendor": "Fortinet",
     "Title": "Authorization bypass through user-controlled key",
     "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-204",
     "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
-    "CollectedAt": "2026-11-26T14:53:28.309226+00:00",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
     "AffectedProduct": [
       "FortiMail 8.0",
       "FortiMail 7.6",
-      "FortiMail 7.4",
-      "FortiMail 7.2"
+      "FortiMail 7.4"
     ],
     "AffectedVersions": [
       {
@@ -1625,10 +1532,6 @@
       {
         "Product": "FortiMail 7.4",
         "Versions": "7.4.0 through 7.4.8"
-      },
-      {
-        "Product": "FortiMail 7.2",
-        "Versions": "7.2 all versions"
       }
     ],
     "FixedVersion": [
@@ -1643,10 +1546,6 @@
       {
         "Product": "FortiMail 7.4",
         "Solution": "Upgrade to 7.4.9 or above"
-      },
-      {
-        "Product": "FortiMail 7.2",
-        "Solution": "Migrate to a fixed release"
       }
     ],
     "CVE": [
@@ -1654,7 +1553,54 @@
     ],
     "Severity": "HIGH",
     "ExtractionStatus": "Version table extracted",
-    "ContentUpdatedAt": "2026-11-17T14:14:00.907507+00:00",
-    "ContentHash": "a9a9cccac2cf34956c385c144413c27c2daaa67c8d8b60063bc806e7765d63ca"
+    "ContentUpdatedAt": "2026-11-27T14:51:17.942804+00:00",
+    "ContentHash": "8c0e0cf420bdf1776c4ca4c33b53e9c3355457d4e85263837e36c298dbf392bf"
+  },
+  {
+    "Vendor": "Fortinet",
+    "Title": "Authorization bypass through user-controlled key",
+    "URL": "https://fortiguard.fortinet.com/psirt/FG-IR-26-211",
+    "PublishedDate": "Tue, 10 Nov 2026 00:00:00 -0700",
+    "CollectedAt": "2026-11-27T14:51:17.942804+00:00",
+    "AffectedProduct": [
+      "FortiMail 8.0",
+      "FortiMail 7.6",
+      "FortiMail 7.4"
+    ],
+    "AffectedVersions": [
+      {
+        "Product": "FortiMail 8.0",
+        "Versions": "8.0.0 through 8.0.1"
+      },
+      {
+        "Product": "FortiMail 7.6",
+        "Versions": "7.6.0 through 7.6.6"
+      },
+      {
+        "Product": "FortiMail 7.4",
+        "Versions": "7.4.0 through 7.4.8"
+      }
+    ],
+    "FixedVersion": [
+      {
+        "Product": "FortiMail 8.0",
+        "Solution": "Upgrade to 8.0.2 or above"
+      },
+      {
+        "Product": "FortiMail 7.6",
+        "Solution": "Upgrade to 7.6.7 or above"
+      },
+      {
+        "Product": "FortiMail 7.4",
+        "Solution": "Upgrade to 7.4.9 or above"
+      }
+    ],
+    "CVE": [
+      "CVE-2026-126159"
+    ],
+    "Severity": "HIGH",
+    "ExtractionStatus": "Version table extracted",
+    "ContentUpdatedAt": "2026-11-27T14:51:17.942804+00:00",
+    "ContentHash": "bc3bfbe1fd8f5915cb76cdd3a75869501431f55bbaa0d6cd7e3bfdadfaecb7b6"
   }
 ]
