@@ -5,7 +5,7 @@
     <link>https://fortiguard.fortinet.com/psirt</link>
     <description>Fortinet PSIRT advisories enriched with affected and fixed versions</description>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Nov 2026 14:51:21 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 13:59:13 +0000</lastBuildDate>
     <item>
       <title>Improper certificate validation in RADIUS protocol</title>
       <link>https://fortiguard.fortinet.com/psirt/FG-IR-26-247</link>
