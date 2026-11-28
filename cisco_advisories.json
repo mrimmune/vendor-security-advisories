@@ -19,11 +19,12 @@
     ],
     "AffectedVersions": [],
     "FixedVersion": [
+      "Crosswork Hierarchical Controller -> 11.0.4 (Nov 2026) 12.0.1 (Nov 2026)",
       "Vulnerability Management (formerly Kenna.VM) -> 1.30.7 (Nov 2026)",
       "Webex Assistant for Meetings -> 1.15.16 (Nov 2026)"
     ],
     "OriginalPublishedDate": "2026-11-20T16:00:00",
-    "LastUpdated": "2026-11-26T01:48:13",
+    "LastUpdated": "2026-11-27T20:04:26",
     "Summary": "<p>On November 18, 2026, nginx announced the availability of a fix for multiple critical vulnerabilities in nginx that could lead to remote code execution. These vulnerabilities affect nginx releases 1.9.5 through 1.31.8 and is fixed in releases 1.31.9 (mainline) and 1.30.7 (stable).</p>\r\n<p>These vulnerabilities were identified by the following CVEs:</p>\r\n<ul>\r\n<li>CVE-2026-113425: NGINX ngx_mail_proxy_module vulnerability</li>\r\n<li>CVE-2026-121810: NGINX ngx_http_v3_module vulnerability</li>\r\n<li>CVE-2026-123007: NGINX ngx_http_v2_module vulnerability</li>\r\n<li>CVE-2026-123633: NGINX ngx_http_v2_module vulnerability</li>\r\n<li>CVE-2026-123634: NGINX resolver vulnerability</li>\r\n</ul>\r\n<p>For more information, see the <a href=\"https://nginx.org/en/security_advisories.html\">nginx Security Advisories</a>.</p>\r\n<p>This advisory will be updated as additional information becomes available.</p>\r\n<p>This advisory is available at the following link:<br><a href=\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nginx-nov-2026-e8jska2s\" target=\"_blank\" rel=\"noopener\">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nginx-nov-2026-e8jska2s</a></p>",
     "CSAFURL": "https://sec.cloudapps.cisco.com/security/center/contentjson/CiscoSecurityAdvisory/cisco-sa-nginx-nov-2026-e8jska2s/csaf/cisco-sa-nginx-nov-2026-e8jska2s.json"
   },
